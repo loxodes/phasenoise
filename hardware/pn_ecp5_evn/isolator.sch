@@ -1,0 +1,736 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 9 9
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Isolator:Si8640BB-B-IU U903
+U 1 1 60488FAA
+P 5500 1950
+F 0 "U903" H 5500 2617 50  0000 C CNN
+F 1 "Si8640BB-B-IU" H 5500 2526 50  0000 C CNN
+F 2 "Package_SO:QSOP-16_3.9x4.9mm_P0.635mm" H 5500 1400 50  0001 C CIN
+F 3 "https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf" H 5500 2350 50  0001 C CNN
+	1    5500 1950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3VP #PWR?
+U 1 1 604D934A
+P 5950 1500
+AR Path="/604D934A" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/604D934A" Ref="#PWR0253"  Part="1" 
+F 0 "#PWR0253" H 6100 1450 50  0001 C CNN
+F 1 "+3.3VP" H 5965 1673 50  0000 C CNN
+F 2 "" H 5950 1500 50  0001 C CNN
+F 3 "" H 5950 1500 50  0001 C CNN
+	1    5950 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 604DA5B4
+P 5950 2350
+AR Path="/604DA5B4" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/604DA5B4" Ref="#PWR0254"  Part="1" 
+F 0 "#PWR0254" H 5950 2100 50  0001 C CNN
+F 1 "GNDD" V 5954 2240 50  0000 R CNN
+F 2 "" H 5950 2350 50  0001 C CNN
+F 3 "" H 5950 2350 50  0001 C CNN
+	1    5950 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 604E7BD5
+P 5050 1500
+AR Path="/5F2678A0/604E7BD5" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/604E7BD5" Ref="#PWR0255"  Part="1" 
+F 0 "#PWR0255" H 5050 1350 50  0001 C CNN
+F 1 "+3.3V" H 5065 1673 50  0000 C CNN
+F 2 "" H 5050 1500 50  0001 C CNN
+F 3 "" H 5050 1500 50  0001 C CNN
+	1    5050 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 604F83A7
+P 5050 2350
+AR Path="/5F2678A0/604F83A7" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/604F83A7" Ref="#PWR0256"  Part="1" 
+F 0 "#PWR0256" H 5050 2100 50  0001 C CNN
+F 1 "GND" H 5055 2177 50  0000 C CNN
+F 2 "" H 5050 2350 50  0001 C CNN
+F 3 "" H 5050 2350 50  0001 C CNN
+	1    5050 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 2350 5100 2350
+Wire Wire Line
+	5950 2350 5900 2350
+Wire Wire Line
+	5950 1500 5950 1550
+Wire Wire Line
+	5950 1550 5900 1550
+Wire Wire Line
+	5050 1500 5050 1550
+Wire Wire Line
+	5050 1550 5100 1550
+Wire Wire Line
+	5050 1550 5050 1650
+Wire Wire Line
+	5050 1650 5100 1650
+Connection ~ 5050 1550
+Wire Wire Line
+	5900 2150 6400 2150
+Wire Wire Line
+	5900 2050 6400 2050
+Wire Wire Line
+	5900 1950 6400 1950
+Wire Wire Line
+	5900 1850 6400 1850
+Wire Wire Line
+	4600 2050 5100 2050
+Wire Wire Line
+	4600 1950 5100 1950
+Wire Wire Line
+	4600 1850 5100 1850
+$Comp
+L Isolator:Si8640BB-B-IU U904
+U 1 1 60518EB8
+P 5500 3300
+F 0 "U904" H 5500 3967 50  0000 C CNN
+F 1 "Si8640BB-B-IU" H 5500 3876 50  0000 C CNN
+F 2 "Package_SO:QSOP-16_3.9x4.9mm_P0.635mm" H 5500 2750 50  0001 C CIN
+F 3 "https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf" H 5500 3700 50  0001 C CNN
+	1    5500 3300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3VP #PWR?
+U 1 1 60518EBE
+P 5950 2850
+AR Path="/60518EBE" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/60518EBE" Ref="#PWR0257"  Part="1" 
+F 0 "#PWR0257" H 6100 2800 50  0001 C CNN
+F 1 "+3.3VP" H 5965 3023 50  0000 C CNN
+F 2 "" H 5950 2850 50  0001 C CNN
+F 3 "" H 5950 2850 50  0001 C CNN
+	1    5950 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 60518EC4
+P 5950 3700
+AR Path="/60518EC4" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/60518EC4" Ref="#PWR0258"  Part="1" 
+F 0 "#PWR0258" H 5950 3450 50  0001 C CNN
+F 1 "GNDD" V 5954 3590 50  0000 R CNN
+F 2 "" H 5950 3700 50  0001 C CNN
+F 3 "" H 5950 3700 50  0001 C CNN
+	1    5950 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 60518ECA
+P 5050 2850
+AR Path="/5F2678A0/60518ECA" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/60518ECA" Ref="#PWR0259"  Part="1" 
+F 0 "#PWR0259" H 5050 2700 50  0001 C CNN
+F 1 "+3.3V" H 5065 3023 50  0000 C CNN
+F 2 "" H 5050 2850 50  0001 C CNN
+F 3 "" H 5050 2850 50  0001 C CNN
+	1    5050 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60518ED0
+P 5050 3700
+AR Path="/5F2678A0/60518ED0" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/60518ED0" Ref="#PWR0260"  Part="1" 
+F 0 "#PWR0260" H 5050 3450 50  0001 C CNN
+F 1 "GND" H 5055 3527 50  0000 C CNN
+F 2 "" H 5050 3700 50  0001 C CNN
+F 3 "" H 5050 3700 50  0001 C CNN
+	1    5050 3700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5050 3700 5100 3700
+Wire Wire Line
+	5950 3700 5900 3700
+Wire Wire Line
+	5950 2850 5950 2900
+Wire Wire Line
+	5950 2900 5900 2900
+Wire Wire Line
+	5050 2850 5050 2900
+Wire Wire Line
+	5050 2900 5100 2900
+Wire Wire Line
+	5050 2900 5050 3000
+Wire Wire Line
+	5050 3000 5100 3000
+Connection ~ 5050 2900
+Wire Wire Line
+	5900 3500 6400 3500
+Wire Wire Line
+	5900 3400 6400 3400
+Wire Wire Line
+	5900 3300 6400 3300
+Wire Wire Line
+	5900 3200 6400 3200
+Wire Wire Line
+	4600 3500 5100 3500
+Wire Wire Line
+	4600 3400 5100 3400
+Wire Wire Line
+	4600 3300 5100 3300
+Wire Wire Line
+	4600 3200 5100 3200
+Text HLabel 4600 1850 0    50   Output ~ 0
+IF_G1_ISO
+Text HLabel 4600 1950 0    50   Output ~ 0
+IF_G2_ISO
+Text HLabel 4600 2050 0    50   Output ~ 0
+LMX_CE_ISO
+Text HLabel 4600 2150 0    50   Output ~ 0
+LMX_SCK_ISO
+Text HLabel 4600 3200 0    50   Output ~ 0
+LMX_CS_ISO
+Text HLabel 4600 3300 0    50   Output ~ 0
+LMX_SDI_ISO
+Text HLabel 6400 1850 2    50   Input ~ 0
+IF_G1
+Text HLabel 6400 1950 2    50   Input ~ 0
+IF_G2
+Text HLabel 6400 2050 2    50   Input ~ 0
+LMX_CE
+Text HLabel 6400 2150 2    50   Input ~ 0
+LMX_SCK
+Text HLabel 6400 3200 2    50   Input ~ 0
+LMX_CS
+Text HLabel 6400 3300 2    50   Input ~ 0
+LMX_SDI
+Text HLabel 6400 3400 2    50   Input ~ 0
+SYNTH_VT_CS
+Text HLabel 6400 3500 2    50   Input ~ 0
+REF_VT_CS
+Text Label 4600 3400 2    50   ~ 0
+SYNTH_VT_CS_ISO
+Text Label 4600 3500 2    50   ~ 0
+REF_VT_CS_ISO
+Text Notes 5050 900  0    50   ~ 0
+per isolator:\nVDD2: 23 mA max\nVDD1: 5 mA max
+Text Label 2700 4500 0    50   ~ 0
+ADC_SDO_ISO
+Text Label 2700 2700 0    50   ~ 0
+ADC_SDO_ISO
+Text Label 2700 4600 0    50   ~ 0
+ADC_SCK_ISO
+Text Label 2700 2800 0    50   ~ 0
+ADC_SCK_ISO
+Wire Wire Line
+	2400 4600 2700 4600
+Wire Wire Line
+	2400 4500 2700 4500
+Text Label 2700 2900 0    50   ~ 0
+REF_VT_CS_ISO
+Text Label 2700 4700 0    50   ~ 0
+SYNTH_VT_CS_ISO
+Wire Wire Line
+	2700 4700 2400 4700
+Wire Wire Line
+	2400 2900 2700 2900
+Wire Wire Line
+	2400 2800 2700 2800
+Wire Wire Line
+	2400 2700 2700 2700
+Wire Wire Line
+	2000 4950 2000 4900
+$Comp
+L power:GND #PWR?
+U 1 1 605968B8
+P 2000 4950
+AR Path="/5F2678A0/605968B8" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/605968B8" Ref="#PWR0261"  Part="1" 
+F 0 "#PWR0261" H 2000 4700 50  0001 C CNN
+F 1 "GND" H 2005 4777 50  0000 C CNN
+F 2 "" H 2000 4950 50  0001 C CNN
+F 3 "" H 2000 4950 50  0001 C CNN
+	1    2000 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_ADC:ADS7868 U902
+U 1 1 605968B2
+P 2000 4600
+F 0 "U902" H 1650 5050 50  0000 C CNN
+F 1 "ADS7868" H 1750 4950 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 2000 4550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ads7866.pdf" H 2050 4850 50  0001 C CNN
+	1    2000 4600
+	1    0    0    -1  
+$EndComp
+Connection ~ 2000 3800
+Wire Wire Line
+	2000 3800 2000 4300
+Wire Wire Line
+	2000 3700 2000 3800
+Wire Wire Line
+	2500 3800 2000 3800
+Wire Wire Line
+	2500 3850 2500 3800
+Wire Wire Line
+	2500 4050 2500 4100
+$Comp
+L power:GND #PWR?
+U 1 1 605968A6
+P 2500 4100
+AR Path="/5F2678A0/605968A6" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/605968A6" Ref="#PWR0262"  Part="1" 
+F 0 "#PWR0262" H 2500 3850 50  0001 C CNN
+F 1 "GND" H 2505 3927 50  0000 C CNN
+F 2 "" H 2500 4100 50  0001 C CNN
+F 3 "" H 2500 4100 50  0001 C CNN
+	1    2500 4100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C902
+U 1 1 605968A0
+P 2500 3950
+F 0 "C902" H 2592 3996 50  0000 L CNN
+F 1 "C_Small" H 2592 3905 50  0000 L CNN
+F 2 "" H 2500 3950 50  0001 C CNN
+F 3 "~" H 2500 3950 50  0001 C CNN
+	1    2500 3950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6059689A
+P 2000 3700
+AR Path="/5F2678A0/6059689A" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/6059689A" Ref="#PWR0263"  Part="1" 
+F 0 "#PWR0263" H 2000 3550 50  0001 C CNN
+F 1 "+3.3V" H 2015 3873 50  0000 C CNN
+F 2 "" H 2000 3700 50  0001 C CNN
+F 3 "" H 2000 3700 50  0001 C CNN
+	1    2000 3700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 4600 1350 4600
+Wire Wire Line
+	2000 3150 2000 3100
+$Comp
+L power:GND #PWR?
+U 1 1 6058CC29
+P 2000 3150
+AR Path="/5F2678A0/6058CC29" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/6058CC29" Ref="#PWR0264"  Part="1" 
+F 0 "#PWR0264" H 2000 2900 50  0001 C CNN
+F 1 "GND" H 2005 2977 50  0000 C CNN
+F 2 "" H 2000 3150 50  0001 C CNN
+F 3 "" H 2000 3150 50  0001 C CNN
+	1    2000 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_ADC:ADS7868 U901
+U 1 1 60583B5C
+P 2000 2800
+F 0 "U901" H 1650 3250 50  0000 C CNN
+F 1 "ADS7868" H 1750 3150 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 2000 2750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ads7866.pdf" H 2050 3050 50  0001 C CNN
+	1    2000 2800
+	1    0    0    -1  
+$EndComp
+Connection ~ 2000 2000
+Wire Wire Line
+	2000 2000 2000 2500
+Wire Wire Line
+	2000 1900 2000 2000
+Wire Wire Line
+	2500 2000 2000 2000
+Wire Wire Line
+	2500 2050 2500 2000
+Wire Wire Line
+	2500 2250 2500 2300
+$Comp
+L power:GND #PWR?
+U 1 1 60579A42
+P 2500 2300
+AR Path="/5F2678A0/60579A42" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/60579A42" Ref="#PWR0265"  Part="1" 
+F 0 "#PWR0265" H 2500 2050 50  0001 C CNN
+F 1 "GND" H 2505 2127 50  0000 C CNN
+F 2 "" H 2500 2300 50  0001 C CNN
+F 3 "" H 2500 2300 50  0001 C CNN
+	1    2500 2300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C901
+U 1 1 6057931E
+P 2500 2150
+F 0 "C901" H 2592 2196 50  0000 L CNN
+F 1 "C_Small" H 2592 2105 50  0000 L CNN
+F 2 "" H 2500 2150 50  0001 C CNN
+F 3 "~" H 2500 2150 50  0001 C CNN
+	1    2500 2150
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 605769CF
+P 2000 1900
+AR Path="/5F2678A0/605769CF" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/605769CF" Ref="#PWR0266"  Part="1" 
+F 0 "#PWR0266" H 2000 1750 50  0001 C CNN
+F 1 "+3.3V" H 2015 2073 50  0000 C CNN
+F 2 "" H 2000 1900 50  0001 C CNN
+F 3 "" H 2000 1900 50  0001 C CNN
+	1    2000 1900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2800 1350 2800
+Text HLabel 1350 2800 0    50   Input ~ 0
+VT_SYNTH_TLM
+Text HLabel 1350 4600 0    50   Input ~ 0
+VT_REF_TLM
+Wire Wire Line
+	5050 4600 5050 4500
+Wire Wire Line
+	5100 4600 5050 4600
+Wire Wire Line
+	5050 4500 5100 4500
+Connection ~ 5050 4500
+Wire Wire Line
+	5050 4450 5050 4500
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6081BF9E
+P 5050 4450
+AR Path="/5F2678A0/6081BF9E" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/6081BF9E" Ref="#PWR0267"  Part="1" 
+F 0 "#PWR0267" H 5050 4300 50  0001 C CNN
+F 1 "+3.3V" H 5065 4623 50  0000 C CNN
+F 2 "" H 5050 4450 50  0001 C CNN
+F 3 "" H 5050 4450 50  0001 C CNN
+	1    5050 4450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5950 4600 5900 4600
+Wire Wire Line
+	5950 4500 5950 4600
+Wire Wire Line
+	5950 4500 5900 4500
+Connection ~ 5950 4500
+Wire Wire Line
+	5950 4450 5950 4500
+$Comp
+L power:+3.3VP #PWR?
+U 1 1 60813891
+P 5950 4450
+AR Path="/60813891" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/60813891" Ref="#PWR0268"  Part="1" 
+F 0 "#PWR0268" H 6100 4400 50  0001 C CNN
+F 1 "+3.3VP" H 5965 4623 50  0000 C CNN
+F 2 "" H 5950 4450 50  0001 C CNN
+F 3 "" H 5950 4450 50  0001 C CNN
+	1    5950 4450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 5300 5100 5300
+$Comp
+L power:GND #PWR?
+U 1 1 6080A72C
+P 5050 5300
+AR Path="/5F2678A0/6080A72C" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/6080A72C" Ref="#PWR0269"  Part="1" 
+F 0 "#PWR0269" H 5050 5050 50  0001 C CNN
+F 1 "GND" H 5055 5127 50  0000 C CNN
+F 2 "" H 5050 5300 50  0001 C CNN
+F 3 "" H 5050 5300 50  0001 C CNN
+	1    5050 5300
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	5950 5300 5900 5300
+$Comp
+L power:GNDD #PWR?
+U 1 1 60804F5B
+P 5950 5300
+AR Path="/60804F5B" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/60804F5B" Ref="#PWR0270"  Part="1" 
+F 0 "#PWR0270" H 5950 5050 50  0001 C CNN
+F 1 "GNDD" V 5954 5190 50  0000 R CNN
+F 2 "" H 5950 5300 50  0001 C CNN
+F 3 "" H 5950 5300 50  0001 C CNN
+	1    5950 5300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Isolator:Si8642BB-B-IU U905
+U 1 1 607FBD8E
+P 5500 4900
+F 0 "U905" H 5500 5567 50  0000 C CNN
+F 1 "Si8642BB-B-IU" H 5500 5476 50  0000 C CNN
+F 2 "Package_SO:QSOP-16_3.9x4.9mm_P0.635mm" H 5500 4350 50  0001 C CIN
+F 3 "https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf" H 5500 5300 50  0001 C CNN
+	1    5500 4900
+	1    0    0    -1  
+$EndComp
+Text HLabel 4600 4800 0    50   Input ~ 0
+LMX_MUXOUT_ISO
+Wire Wire Line
+	4600 2150 5100 2150
+Text Label 4600 5000 2    50   ~ 0
+ADC_SCK_ISO
+Text Label 4600 4900 2    50   ~ 0
+ADC_SDO_ISO
+Wire Wire Line
+	4600 4800 5100 4800
+Wire Wire Line
+	5100 5000 4600 5000
+Wire Wire Line
+	5100 4900 4600 4900
+Wire Wire Line
+	5900 4900 6400 4900
+Wire Wire Line
+	5900 5000 6400 5000
+Wire Wire Line
+	5900 4800 6400 4800
+Text HLabel 6400 4800 2    50   Output ~ 0
+LMX_MUXOUT
+Text HLabel 6400 5000 2    50   Input ~ 0
+ADC_SCK
+Text HLabel 6400 4900 2    50   Output ~ 0
+ADC_SDO
+$Comp
+L power:GND #PWR?
+U 1 1 5F590922
+P 5250 5850
+AR Path="/5F2678A0/5F590922" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/5F590922" Ref="#PWR0271"  Part="1" 
+F 0 "#PWR0271" H 5250 5600 50  0001 C CNN
+F 1 "GND" H 5255 5677 50  0000 C CNN
+F 2 "" H 5250 5850 50  0001 C CNN
+F 3 "" H 5250 5850 50  0001 C CNN
+	1    5250 5850
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 5F590B13
+P 5750 5850
+AR Path="/5F590B13" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/5F590B13" Ref="#PWR0272"  Part="1" 
+F 0 "#PWR0272" H 5750 5600 50  0001 C CNN
+F 1 "GNDD" V 5754 5740 50  0000 R CNN
+F 2 "" H 5750 5850 50  0001 C CNN
+F 3 "" H 5750 5850 50  0001 C CNN
+	1    5750 5850
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:C_Small C905
+U 1 1 5F59110B
+P 5500 5850
+F 0 "C905" V 5271 5850 50  0000 C CNN
+F 1 "C_Small" V 5362 5850 50  0000 C CNN
+F 2 "" H 5500 5850 50  0001 C CNN
+F 3 "~" H 5500 5850 50  0001 C CNN
+	1    5500 5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5250 5850 5400 5850
+Wire Wire Line
+	5600 5850 5750 5850
+$Comp
+L power:+3.3VP #PWR?
+U 1 1 5F5BC2AD
+P 7350 1700
+AR Path="/5F5BC2AD" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/5F5BC2AD" Ref="#PWR0273"  Part="1" 
+F 0 "#PWR0273" H 7500 1650 50  0001 C CNN
+F 1 "+3.3VP" H 7365 1873 50  0000 C CNN
+F 2 "" H 7350 1700 50  0001 C CNN
+F 3 "" H 7350 1700 50  0001 C CNN
+	1    7350 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C906
+U 1 1 5F5C5982
+P 7350 1850
+F 0 "C906" H 7442 1896 50  0000 L CNN
+F 1 "C_Small" H 7442 1805 50  0000 L CNN
+F 2 "" H 7350 1850 50  0001 C CNN
+F 3 "~" H 7350 1850 50  0001 C CNN
+	1    7350 1850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 5F5C7FFB
+P 7350 2000
+AR Path="/5F5C7FFB" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/5F5C7FFB" Ref="#PWR0274"  Part="1" 
+F 0 "#PWR0274" H 7350 1750 50  0001 C CNN
+F 1 "GNDD" V 7354 1890 50  0000 R CNN
+F 2 "" H 7350 2000 50  0001 C CNN
+F 3 "" H 7350 2000 50  0001 C CNN
+	1    7350 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 2000 7350 1950
+Wire Wire Line
+	7350 1750 7350 1700
+$Comp
+L power:+3.3VP #PWR?
+U 1 1 5F5CD079
+P 7900 1700
+AR Path="/5F5CD079" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/5F5CD079" Ref="#PWR0275"  Part="1" 
+F 0 "#PWR0275" H 8050 1650 50  0001 C CNN
+F 1 "+3.3VP" H 7915 1873 50  0000 C CNN
+F 2 "" H 7900 1700 50  0001 C CNN
+F 3 "" H 7900 1700 50  0001 C CNN
+	1    7900 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C907
+U 1 1 5F5CD07F
+P 7900 1850
+F 0 "C907" H 7992 1896 50  0000 L CNN
+F 1 "C_Small" H 7992 1805 50  0000 L CNN
+F 2 "" H 7900 1850 50  0001 C CNN
+F 3 "~" H 7900 1850 50  0001 C CNN
+	1    7900 1850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 5F5CD085
+P 7900 2000
+AR Path="/5F5CD085" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/5F5CD085" Ref="#PWR0276"  Part="1" 
+F 0 "#PWR0276" H 7900 1750 50  0001 C CNN
+F 1 "GNDD" V 7904 1890 50  0000 R CNN
+F 2 "" H 7900 2000 50  0001 C CNN
+F 3 "" H 7900 2000 50  0001 C CNN
+	1    7900 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 2000 7900 1950
+Wire Wire Line
+	7900 1750 7900 1700
+Wire Wire Line
+	3750 6000 3750 6050
+$Comp
+L power:GND #PWR?
+U 1 1 5F5D3203
+P 3750 6050
+AR Path="/5F2678A0/5F5D3203" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/5F5D3203" Ref="#PWR0277"  Part="1" 
+F 0 "#PWR0277" H 3750 5800 50  0001 C CNN
+F 1 "GND" H 3755 5877 50  0000 C CNN
+F 2 "" H 3750 6050 50  0001 C CNN
+F 3 "" H 3750 6050 50  0001 C CNN
+	1    3750 6050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C904
+U 1 1 5F5D3209
+P 3750 5900
+F 0 "C904" H 3842 5946 50  0000 L CNN
+F 1 "C_Small" H 3842 5855 50  0000 L CNN
+F 2 "" H 3750 5900 50  0001 C CNN
+F 3 "~" H 3750 5900 50  0001 C CNN
+	1    3750 5900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F5D320F
+P 3750 5650
+AR Path="/5F2678A0/5F5D320F" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/5F5D320F" Ref="#PWR0278"  Part="1" 
+F 0 "#PWR0278" H 3750 5500 50  0001 C CNN
+F 1 "+3.3V" H 3765 5823 50  0000 C CNN
+F 2 "" H 3750 5650 50  0001 C CNN
+F 3 "" H 3750 5650 50  0001 C CNN
+	1    3750 5650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5650 3750 5800
+Wire Wire Line
+	3150 6000 3150 6050
+$Comp
+L power:GND #PWR?
+U 1 1 5F5E6E34
+P 3150 6050
+AR Path="/5F2678A0/5F5E6E34" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/5F5E6E34" Ref="#PWR0279"  Part="1" 
+F 0 "#PWR0279" H 3150 5800 50  0001 C CNN
+F 1 "GND" H 3155 5877 50  0000 C CNN
+F 2 "" H 3150 6050 50  0001 C CNN
+F 3 "" H 3150 6050 50  0001 C CNN
+	1    3150 6050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C903
+U 1 1 5F5E6E3A
+P 3150 5900
+F 0 "C903" H 3242 5946 50  0000 L CNN
+F 1 "C_Small" H 3242 5855 50  0000 L CNN
+F 2 "" H 3150 5900 50  0001 C CNN
+F 3 "~" H 3150 5900 50  0001 C CNN
+	1    3150 5900
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5F5E6E40
+P 3150 5650
+AR Path="/5F2678A0/5F5E6E40" Ref="#PWR?"  Part="1" 
+AR Path="/6047B31A/5F5E6E40" Ref="#PWR0280"  Part="1" 
+F 0 "#PWR0280" H 3150 5500 50  0001 C CNN
+F 1 "+3.3V" H 3165 5823 50  0000 C CNN
+F 2 "" H 3150 5650 50  0001 C CNN
+F 3 "" H 3150 5650 50  0001 C CNN
+	1    3150 5650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 5650 3150 5800
+$EndSCHEMATC
