@@ -24,30 +24,6 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADM7170
 	1    5500 2250
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:TestPoint TP501
-U 1 1 5F2686E1
-P 3950 1300
-F 0 "TP501" H 4008 1418 50  0000 L CNN
-F 1 "TestPoint" H 4008 1327 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 4150 1300 50  0001 C CNN
-F 3 "~" H 4150 1300 50  0001 C CNN
-	1    3950 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP?
-U 1 1 5F74588A
-P 4900 1300
-AR Path="/5F4ECD93/5F74588A" Ref="TP?"  Part="1" 
-AR Path="/5F2678A0/5F74588A" Ref="TP502"  Part="1" 
-F 0 "TP502" H 4958 1418 50  0000 L CNN
-F 1 "TestPoint" H 4958 1327 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 5100 1300 50  0001 C CNN
-F 3 "~" H 5100 1300 50  0001 C CNN
-	1    4900 1300
-	1    0    0    -1  
-$EndComp
 Text Notes 5400 900  0    50   ~ 0
 TODO:\n- Add 3.3VA filtered 3.3V supply\n- Add -3.3V analog supply\n- Wire up 3.3V supply
 $Comp
@@ -201,11 +177,6 @@ F 3 "" H 7350 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3950 1450
-Wire Wire Line
-	4900 1300 4900 1450
-Connection ~ 4900 1450
-Wire Wire Line
-	3950 1300 3950 1450
 $Comp
 L Connector:TestPoint TP504
 U 1 1 5F8BC5B9
@@ -587,7 +558,7 @@ U 1 1 603E7A62
 P 8450 4500
 F 0 "U503" H 8450 4865 50  0000 C CNN
 F 1 "TPS72301DB" H 8450 4774 50  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23-5" H 8450 5000 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8450 5000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tps723.pdf" H 8450 4600 50  0001 C CNN
 	1    8450 4500
 	1    0    0    -1  
@@ -995,37 +966,14 @@ Wire Wire Line
 Wire Wire Line
 	1700 1850 1700 2050
 $Comp
-L Device:C_Small C513
-U 1 1 5F4FA838
-P 2550 1750
-F 0 "C513" H 2642 1796 50  0000 L CNN
-F 1 "100 uF" H 2642 1705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 2550 1750 50  0001 C CNN
-F 3 "~" H 2550 1750 50  0001 C CNN
-	1    2550 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0283
-U 1 1 5F4FAD3F
-P 2550 2050
-F 0 "#PWR0283" H 2550 1800 50  0001 C CNN
-F 1 "GND" H 2555 1877 50  0000 C CNN
-F 2 "" H 2550 2050 50  0001 C CNN
-F 3 "" H 2550 2050 50  0001 C CNN
-	1    2550 2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2550 2050 2550 1850
-$Comp
-L Device:C_Small C514
+L Device:CP_Small C514
 U 1 1 5F4FEB95
 P 3050 1750
 F 0 "C514" H 3142 1796 50  0000 L CNN
-F 1 "100 uF" H 3142 1705 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3050 1750 50  0001 C CNN
+F 1 "270 uF" H 3142 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.9" H 3050 1750 50  0001 C CNN
 F 3 "~" H 3050 1750 50  0001 C CNN
+F 4 "875105245014" H 3050 1750 50  0001 C CNN "MPN"
 	1    3050 1750
 	1    0    0    -1  
 $EndComp
@@ -1043,13 +991,6 @@ $EndComp
 Wire Wire Line
 	3050 1850 3050 2050
 Wire Wire Line
-	2000 1450 2550 1450
-Wire Wire Line
-	2550 1650 2550 1450
-Connection ~ 2550 1450
-Wire Wire Line
-	2550 1450 3050 1450
-Wire Wire Line
 	3050 1650 3050 1450
 Connection ~ 3050 1450
 Wire Wire Line
@@ -1064,5 +1005,53 @@ F 2 "Diode_SMD:D_SOD-323" V 1700 1750 50  0001 C CNN
 F 3 "~" V 1700 1750 50  0001 C CNN
 	1    1700 1750
 	0    1    1    0   
+$EndComp
+Connection ~ 4900 1450
+Wire Wire Line
+	4900 1300 4900 1450
+$Comp
+L Connector:TestPoint TP?
+U 1 1 5F74588A
+P 4900 1300
+AR Path="/5F4ECD93/5F74588A" Ref="TP?"  Part="1" 
+AR Path="/5F2678A0/5F74588A" Ref="TP502"  Part="1" 
+F 0 "TP502" H 4958 1418 50  0000 L CNN
+F 1 "TestPoint" H 4958 1327 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 5100 1300 50  0001 C CNN
+F 3 "~" H 5100 1300 50  0001 C CNN
+	1    4900 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1450 3050 1450
+Wire Wire Line
+	2000 1450 2550 1450
+Connection ~ 2550 1450
+Wire Wire Line
+	2550 1650 2550 1450
+Wire Wire Line
+	2550 2050 2550 1850
+$Comp
+L power:GND #PWR0283
+U 1 1 5F4FAD3F
+P 2550 2050
+F 0 "#PWR0283" H 2550 1800 50  0001 C CNN
+F 1 "GND" H 2555 1877 50  0000 C CNN
+F 2 "" H 2550 2050 50  0001 C CNN
+F 3 "" H 2550 2050 50  0001 C CNN
+	1    2550 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP_Small C513
+U 1 1 5F4FA838
+P 2550 1750
+F 0 "C513" H 2642 1796 50  0000 L CNN
+F 1 "270 uF" H 2642 1705 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.9" H 2550 1750 50  0001 C CNN
+F 3 "~" H 2550 1750 50  0001 C CNN
+F 4 "875105245014" H 2550 1750 50  0001 C CNN "MPN"
+	1    2550 1750
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

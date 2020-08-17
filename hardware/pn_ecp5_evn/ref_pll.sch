@@ -229,7 +229,7 @@ AR Path="/5F265927/5F4F2759" Ref="C?"  Part="1"
 AR Path="/5F4ECD93/5F4F2759" Ref="C602"  Part="1" 
 F 0 "C602" V 3421 1550 50  0000 C CNN
 F 1 "C_Small" V 3512 1550 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3650 1550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3650 1550 50  0001 C CNN
 F 3 "~" H 3650 1550 50  0001 C CNN
 	1    3650 1550
 	0    1    1    0   
@@ -253,7 +253,7 @@ P 6450 2400
 AR Path="/5F265927/5F4F2765" Ref="R?"  Part="1" 
 AR Path="/5F4ECD93/5F4F2765" Ref="R612"  Part="1" 
 F 0 "R612" V 6646 2400 50  0000 C CNN
-F 1 "R_Small" V 6555 2400 50  0000 C CNN
+F 1 "100" V 6555 2400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 6450 2400 50  0001 C CNN
 F 3 "~" H 6450 2400 50  0001 C CNN
 	1    6450 2400
@@ -266,8 +266,8 @@ P 6700 2700
 AR Path="/5F265927/5F4F276B" Ref="C?"  Part="1" 
 AR Path="/5F4ECD93/5F4F276B" Ref="C604"  Part="1" 
 F 0 "C604" H 6608 2654 50  0000 R CNN
-F 1 "C_Small" H 6608 2745 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 6700 2700 50  0001 C CNN
+F 1 "1 uF" H 6608 2745 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 6700 2700 50  0001 C CNN
 F 3 "~" H 6700 2700 50  0001 C CNN
 	1    6700 2700
 	-1   0    0    1   
@@ -318,7 +318,7 @@ P 7650 1600
 AR Path="/5F265927/5F4F2784" Ref="C?"  Part="1" 
 AR Path="/5F4ECD93/5F4F2784" Ref="C605"  Part="1" 
 F 0 "C605" H 7742 1646 50  0000 L CNN
-F 1 "C_Small" H 7742 1555 50  0000 L CNN
+F 1 "10 nF" H 7742 1555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7650 1600 50  0001 C CNN
 F 3 "~" H 7650 1600 50  0001 C CNN
 	1    7650 1600
@@ -331,7 +331,7 @@ P 8200 1600
 AR Path="/5F265927/5F4F278A" Ref="C?"  Part="1" 
 AR Path="/5F4ECD93/5F4F278A" Ref="C606"  Part="1" 
 F 0 "C606" H 8292 1646 50  0000 L CNN
-F 1 "C_Small" H 8292 1555 50  0000 L CNN
+F 1 "1 uF" H 8292 1555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 8200 1600 50  0001 C CNN
 F 3 "~" H 8200 1600 50  0001 C CNN
 	1    8200 1600
@@ -455,7 +455,7 @@ P 4650 2400
 AR Path="/5F265927/5F4F27C9" Ref="R?"  Part="1" 
 AR Path="/5F4ECD93/5F4F27C9" Ref="R610"  Part="1" 
 F 0 "R610" V 4846 2400 50  0000 C CNN
-F 1 "R_Small" V 4755 2400 50  0000 C CNN
+F 1 "0" V 4755 2400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4650 2400 50  0001 C CNN
 F 3 "~" H 4650 2400 50  0001 C CNN
 	1    4650 2400
@@ -497,7 +497,7 @@ P 6050 2700
 AR Path="/5F265927/5F4F27DD" Ref="R?"  Part="1" 
 AR Path="/5F4ECD93/5F4F27DD" Ref="R611"  Part="1" 
 F 0 "R611" H 5991 2654 50  0000 R CNN
-F 1 "R_Small" H 5991 2745 50  0000 R CNN
+F 1 "10k" H 5991 2745 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 6050 2700 50  0001 C CNN
 F 3 "~" H 6050 2700 50  0001 C CNN
 	1    6050 2700
@@ -916,7 +916,7 @@ P 8250 2400
 AR Path="/5F265927/5F6D0307" Ref="R?"  Part="1" 
 AR Path="/5F4ECD93/5F6D0307" Ref="R613"  Part="1" 
 F 0 "R613" V 8446 2400 50  0000 C CNN
-F 1 "R_Small" V 8355 2400 50  0000 C CNN
+F 1 "0" V 8355 2400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 8250 2400 50  0001 C CNN
 F 3 "~" H 8250 2400 50  0001 C CNN
 	1    8250 2400
@@ -931,7 +931,7 @@ P 8700 2400
 AR Path="/5F265927/5F6DDC7F" Ref="R?"  Part="1" 
 AR Path="/5F4ECD93/5F6DDC7F" Ref="R616"  Part="1" 
 F 0 "R616" V 8896 2400 50  0000 C CNN
-F 1 "R_Small" V 8805 2400 50  0000 C CNN
+F 1 "0" V 8805 2400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 8700 2400 50  0001 C CNN
 F 3 "~" H 8700 2400 50  0001 C CNN
 	1    8700 2400
@@ -944,7 +944,7 @@ P 8450 2650
 AR Path="/5F265927/5F6DE0EC" Ref="R?"  Part="1" 
 AR Path="/5F4ECD93/5F6DE0EC" Ref="R614"  Part="1" 
 F 0 "R614" H 8509 2696 50  0000 L CNN
-F 1 "R_Small" H 8509 2605 50  0000 L CNN
+F 1 "DNI" H 8509 2605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 8450 2650 50  0001 C CNN
 F 3 "~" H 8450 2650 50  0001 C CNN
 	1    8450 2650
@@ -990,7 +990,7 @@ P 8450 3250
 AR Path="/5F265927/5F6ED4C4" Ref="R?"  Part="1" 
 AR Path="/5F4ECD93/5F6ED4C4" Ref="R615"  Part="1" 
 F 0 "R615" H 8509 3296 50  0000 L CNN
-F 1 "R_Small" H 8509 3205 50  0000 L CNN
+F 1 "DNI" H 8509 3205 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 8450 3250 50  0001 C CNN
 F 3 "~" H 8450 3250 50  0001 C CNN
 	1    8450 3250
@@ -1020,17 +1020,6 @@ Wire Wire Line
 	8950 3250 8950 3450
 Wire Wire Line
 	8800 2400 9000 2400
-$Comp
-L Connector:TestPoint TP601
-U 1 1 5F71DFF3
-P 1100 6700
-F 0 "TP601" H 1158 6818 50  0000 L CNN
-F 1 "TestPoint" H 1158 6727 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 1300 6700 50  0001 C CNN
-F 3 "~" H 1300 6700 50  0001 C CNN
-	1    1100 6700
-	-1   0    0    -1  
-$EndComp
 $Comp
 L Connector:TestPoint TP605
 U 1 1 5F7225E6
@@ -1087,15 +1076,12 @@ $EndComp
 Wire Wire Line
 	3750 6700 3750 6850
 Wire Wire Line
-	1100 6700 1100 6950
-Connection ~ 1100 6950
-Wire Wire Line
 	1950 2300 1700 2300
 Connection ~ 1950 2300
 Text HLabel 1700 2300 0    50   Input ~ 0
 PHDET_IN
 Text Notes 4100 950  0    50   ~ 0
-TODO:\ncalculate stability?\nverify clamping circuit
+TODO:\ncalculate stability?\nverify clamping circuit\ninvestigate noise tradeoffs
 Text Notes 2600 4900 0    50   ~ 0
 TODO:\nverify buffer circuit
 Text Notes 3600 650  0    50   ~ 0
@@ -1103,5 +1089,11 @@ TODO: check number of inversions prior to vtune, maybe have one amp be select
 Text Notes 3150 1150 0    118  ~ 0
 integrator
 Text Notes 4950 1150 0    118  ~ 0
-ideal diode
+precision rectifier
+Text Notes 3700 3450 0    50   ~ 0
+TODO: use c0g/large caps in loop
+Text Notes 8650 2050 0    50   ~ 0
+TODO: attenuate oscillator output to 2 Vpp
+Text Notes 2900 3300 0    50   ~ 0
+TODO: use c0g/large caps in loop
 $EndSCHEMATC
