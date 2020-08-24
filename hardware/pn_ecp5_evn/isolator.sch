@@ -98,15 +98,15 @@ Wire Wire Line
 Wire Wire Line
 	5900 2050 6400 2050
 Wire Wire Line
-	5900 1950 6400 1950
+	5900 3300 6400 3300
 Wire Wire Line
-	5900 1850 6400 1850
+	5900 3200 6400 3200
 Wire Wire Line
 	4600 2050 5100 2050
 Wire Wire Line
-	4600 1950 5100 1950
+	4600 3300 5100 3300
 Wire Wire Line
-	4600 1850 5100 1850
+	4600 3200 5100 3200
 $Comp
 L Isolator:Si8640BB-B-IU U904
 U 1 1 60518EB8
@@ -192,40 +192,40 @@ Wire Wire Line
 Wire Wire Line
 	5900 3400 6400 3400
 Wire Wire Line
-	5900 3300 6400 3300
+	5900 1850 6400 1850
 Wire Wire Line
-	5900 3200 6400 3200
+	5900 1950 6400 1950
 Wire Wire Line
 	4600 3500 5100 3500
 Wire Wire Line
 	4600 3400 5100 3400
 Wire Wire Line
-	4600 3300 5100 3300
+	4600 1850 5100 1850
 Wire Wire Line
-	4600 3200 5100 3200
-Text HLabel 4600 1850 0    50   Output ~ 0
+	4600 1950 5100 1950
+Text HLabel 4600 3200 0    50   Output ~ 0
 IF_G1_ISO
-Text HLabel 4600 1950 0    50   Output ~ 0
+Text HLabel 4600 3300 0    50   Output ~ 0
 IF_G2_ISO
 Text HLabel 4600 2050 0    50   Output ~ 0
 LMX_CE_ISO
 Text HLabel 4600 2150 0    50   Output ~ 0
 LMX_SCK_ISO
-Text HLabel 4600 3200 0    50   Output ~ 0
+Text HLabel 4600 1950 0    50   Output ~ 0
 LMX_CS_ISO
-Text HLabel 4600 3300 0    50   Output ~ 0
+Text HLabel 4600 1850 0    50   Output ~ 0
 LMX_SDI_ISO
-Text HLabel 6400 1850 2    50   Input ~ 0
+Text HLabel 6400 3200 2    50   Input ~ 0
 IF_G1
-Text HLabel 6400 1950 2    50   Input ~ 0
+Text HLabel 6400 3300 2    50   Input ~ 0
 IF_G2
 Text HLabel 6400 2050 2    50   Input ~ 0
 LMX_CE
 Text HLabel 6400 2150 2    50   Input ~ 0
 LMX_SCK
-Text HLabel 6400 3200 2    50   Input ~ 0
+Text HLabel 6400 1950 2    50   Input ~ 0
 LMX_CS
-Text HLabel 6400 3300 2    50   Input ~ 0
+Text HLabel 6400 1850 2    50   Input ~ 0
 LMX_SDI
 Text HLabel 6400 3400 2    50   Input ~ 0
 SYNTH_VT_CS

@@ -1090,8 +1090,6 @@ Text Notes 3150 1150 0    118  ~ 0
 integrator
 Text Notes 4950 1150 0    118  ~ 0
 precision rectifier
-Text Notes 3700 3450 0    50   ~ 0
-TODO: use c0g/large caps in loop
 Text Notes 8650 2050 0    50   ~ 0
 TODO: attenuate oscillator output to 2 Vpp
 Text Notes 2900 3300 0    50   ~ 0
