@@ -824,7 +824,7 @@ VOUT_N
 Wire Wire Line
 	6950 2500 7400 2500
 Wire Wire Line
-	7300 4800 6350 4800
+	7300 4800 6800 4800
 Connection ~ 6350 4800
 Text HLabel 2850 4600 0    50   Input ~ 0
 BUF_~PD
@@ -855,4 +855,33 @@ Wire Wire Line
 Connection ~ 3650 6800
 Text Notes 4300 750  0    50   ~ 0
 TODO: simulate stability and frequency response
+$Comp
+L Device:C_Small C814
+U 1 1 5F478B8F
+P 6800 5000
+F 0 "C814" H 6708 4954 50  0000 R CNN
+F 1 "100 nF" H 6708 5045 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6800 5000 50  0001 C CNN
+F 3 "~" H 6800 5000 50  0001 C CNN
+	1    6800 5000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0306
+U 1 1 5F478B95
+P 6800 5150
+F 0 "#PWR0306" H 6800 4900 50  0001 C CNN
+F 1 "GND" H 6805 4977 50  0001 C CNN
+F 2 "" H 6800 5150 50  0001 C CNN
+F 3 "" H 6800 5150 50  0001 C CNN
+	1    6800 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 5150 6800 5100
+Wire Wire Line
+	6800 4900 6800 4800
+Connection ~ 6800 4800
+Wire Wire Line
+	6800 4800 6350 4800
 $EndSCHEMATC
