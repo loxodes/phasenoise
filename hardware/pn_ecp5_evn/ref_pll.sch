@@ -13,19 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L power:+3.3VA #PWR?
-U 1 1 5F4F26F5
-P 7400 1000
-AR Path="/5F265927/5F4F26F5" Ref="#PWR?"  Part="1" 
-AR Path="/5F4ECD93/5F4F26F5" Ref="#PWR0197"  Part="1" 
-F 0 "#PWR0197" H 7400 850 50  0001 C CNN
-F 1 "+3.3VA" H 7415 1173 50  0000 C CNN
-F 2 "" H 7400 1000 50  0001 C CNN
-F 3 "" H 7400 1000 50  0001 C CNN
-	1    7400 1000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1100 6950 1100 7050
 Wire Wire Line
@@ -515,19 +502,6 @@ Connection ~ 5750 2300
 Connection ~ 6050 2400
 Wire Wire Line
 	9500 4250 9500 4400
-$Comp
-L power:+3.3VA #PWR?
-U 1 1 5F4F27EA
-P 9500 4250
-AR Path="/5F265927/5F4F27EA" Ref="#PWR?"  Part="1" 
-AR Path="/5F4ECD93/5F4F27EA" Ref="#PWR0207"  Part="1" 
-F 0 "#PWR0207" H 9500 4100 50  0001 C CNN
-F 1 "+3.3VA" H 9515 4423 50  0000 C CNN
-F 2 "" H 9500 4250 50  0001 C CNN
-F 3 "" H 9500 4250 50  0001 C CNN
-	1    9500 4250
-	1    0    0    -1  
-$EndComp
 Connection ~ 9750 4750
 Wire Wire Line
 	10250 4750 10250 4850
@@ -1094,4 +1068,26 @@ Text Notes 8650 2050 0    50   ~ 0
 TODO: attenuate oscillator output to 2 Vpp
 Text Notes 2900 3300 0    50   ~ 0
 TODO: use c0g/large caps in loop
+$Comp
+L power:+3.3V #PWR0197
+U 1 1 5F4A19B2
+P 7400 1000
+F 0 "#PWR0197" H 7400 850 50  0001 C CNN
+F 1 "+3.3V" H 7415 1173 50  0000 C CNN
+F 2 "" H 7400 1000 50  0001 C CNN
+F 3 "" H 7400 1000 50  0001 C CNN
+	1    7400 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0207
+U 1 1 5F4A1D60
+P 9500 4250
+F 0 "#PWR0207" H 9500 4100 50  0001 C CNN
+F 1 "+3.3V" H 9515 4423 50  0000 C CNN
+F 2 "" H 9500 4250 50  0001 C CNN
+F 3 "" H 9500 4250 50  0001 C CNN
+	1    9500 4250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

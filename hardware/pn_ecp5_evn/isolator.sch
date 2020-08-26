@@ -94,15 +94,15 @@ Wire Wire Line
 	5050 1650 5100 1650
 Connection ~ 5050 1550
 Wire Wire Line
-	5900 2150 6400 2150
+	5900 1950 6400 1950
 Wire Wire Line
-	5900 2050 6400 2050
+	5900 1850 6400 1850
 Wire Wire Line
 	5900 3300 6400 3300
 Wire Wire Line
 	5900 3200 6400 3200
 Wire Wire Line
-	4600 2050 5100 2050
+	4600 1850 5100 1850
 Wire Wire Line
 	4600 3300 5100 3300
 Wire Wire Line
@@ -190,49 +190,41 @@ Connection ~ 5050 2900
 Wire Wire Line
 	5900 3500 6400 3500
 Wire Wire Line
-	5900 3400 6400 3400
+	5900 2050 6400 2050
 Wire Wire Line
-	5900 1850 6400 1850
-Wire Wire Line
-	5900 1950 6400 1950
+	5900 2150 6400 2150
 Wire Wire Line
 	4600 3500 5100 3500
 Wire Wire Line
-	4600 3400 5100 3400
+	4600 2050 5100 2050
 Wire Wire Line
-	4600 1850 5100 1850
-Wire Wire Line
-	4600 1950 5100 1950
+	4600 2150 5100 2150
 Text HLabel 4600 3200 0    50   Output ~ 0
 IF_G1_ISO
 Text HLabel 4600 3300 0    50   Output ~ 0
 IF_G2_ISO
-Text HLabel 4600 2050 0    50   Output ~ 0
-LMX_CE_ISO
-Text HLabel 4600 2150 0    50   Output ~ 0
-LMX_SCK_ISO
-Text HLabel 4600 1950 0    50   Output ~ 0
-LMX_CS_ISO
 Text HLabel 4600 1850 0    50   Output ~ 0
+LMX_CE_ISO
+Text HLabel 4600 1950 0    50   Output ~ 0
+LMX_SCK_ISO
+Text HLabel 4600 2150 0    50   Output ~ 0
+LMX_CS_ISO
+Text HLabel 4600 2050 0    50   Output ~ 0
 LMX_SDI_ISO
 Text HLabel 6400 3200 2    50   Input ~ 0
 IF_G1
 Text HLabel 6400 3300 2    50   Input ~ 0
 IF_G2
-Text HLabel 6400 2050 2    50   Input ~ 0
-LMX_CE
-Text HLabel 6400 2150 2    50   Input ~ 0
-LMX_SCK
-Text HLabel 6400 1950 2    50   Input ~ 0
-LMX_CS
 Text HLabel 6400 1850 2    50   Input ~ 0
+LMX_CE
+Text HLabel 6400 1950 2    50   Input ~ 0
+LMX_SCK
+Text HLabel 6400 2150 2    50   Input ~ 0
+LMX_CS
+Text HLabel 6400 2050 2    50   Input ~ 0
 LMX_SDI
-Text HLabel 6400 3400 2    50   Input ~ 0
-SYNTH_VT_CS
 Text HLabel 6400 3500 2    50   Input ~ 0
 REF_VT_CS
-Text Label 4600 3400 2    50   ~ 0
-SYNTH_VT_CS_ISO
 Text Label 4600 3500 2    50   ~ 0
 REF_VT_CS_ISO
 Text Notes 5050 900  0    50   ~ 0
@@ -505,7 +497,7 @@ $EndComp
 Text HLabel 4600 4800 0    50   Input ~ 0
 LMX_MUXOUT_ISO
 Wire Wire Line
-	4600 2150 5100 2150
+	4600 1950 5100 1950
 Text Label 4600 5000 2    50   ~ 0
 ADC_SCK_ISO
 Text Label 4600 4900 2    50   ~ 0
@@ -733,14 +725,6 @@ F 3 "" H 3150 5650 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3150 5650 3150 5800
-Text HLabel 6400 5100 2    50   Input ~ 0
-BUF_~PD
-Wire Wire Line
-	6400 5100 5900 5100
-Text HLabel 4600 5100 0    50   Output ~ 0
-BUF_~PD~_ISO
-Wire Wire Line
-	4600 5100 5100 5100
 Wire Wire Line
 	2450 5950 2450 6000
 $Comp
@@ -823,4 +807,20 @@ Wire Wire Line
 	8400 1900 8400 1850
 Wire Wire Line
 	8400 1650 8400 1600
+Text HLabel 6400 3400 2    50   Input ~ 0
+BUF_~PD
+Wire Wire Line
+	6400 3400 5900 3400
+Text HLabel 4600 3400 0    50   Output ~ 0
+BUF_~PD~_ISO
+Wire Wire Line
+	4600 3400 5100 3400
+Wire Wire Line
+	4600 5100 5100 5100
+Text Label 4600 5100 2    50   ~ 0
+SYNTH_VT_CS_ISO
+Wire Wire Line
+	5900 5100 6400 5100
+Text HLabel 6400 5100 2    50   Input ~ 0
+SYNTH_VT_CS
 $EndSCHEMATC
