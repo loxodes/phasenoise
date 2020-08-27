@@ -498,9 +498,9 @@ Text HLabel 4600 4800 0    50   Input ~ 0
 LMX_MUXOUT_ISO
 Wire Wire Line
 	4600 1950 5100 1950
-Text Label 4600 5000 2    50   ~ 0
-ADC_SCK_ISO
 Text Label 4600 4900 2    50   ~ 0
+ADC_SCK_ISO
+Text Label 4600 5000 2    50   ~ 0
 ADC_SDO_ISO
 Wire Wire Line
 	4600 4800 5100 4800
@@ -509,16 +509,16 @@ Wire Wire Line
 Wire Wire Line
 	5100 4900 4600 4900
 Wire Wire Line
-	5900 4900 6400 4900
-Wire Wire Line
 	5900 5000 6400 5000
+Wire Wire Line
+	5900 4900 6400 4900
 Wire Wire Line
 	5900 4800 6400 4800
 Text HLabel 6400 4800 2    50   Output ~ 0
 LMX_MUXOUT
-Text HLabel 6400 5000 2    50   Input ~ 0
+Text HLabel 6400 4900 2    50   Input ~ 0
 ADC_SCK
-Text HLabel 6400 4900 2    50   Output ~ 0
+Text HLabel 6400 5000 2    50   Output ~ 0
 ADC_SDO
 $Comp
 L power:GND #PWR?
