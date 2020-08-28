@@ -827,8 +827,8 @@ $Comp
 L vna:ADG621 U702
 U 1 1 5FE439E0
 P 8000 2450
-F 0 "U702" H 7450 2900 50  0000 L CNN
-F 1 "ADG621" H 7450 2800 50  0000 L CNN
+F 0 "U702" H 7650 2750 50  0000 L CNN
+F 1 "ADG621" H 7650 2650 50  0000 L CNN
 F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 8000 2350 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG621.pdf" H 8000 2450 50  0001 C CNN
 	1    8000 2450
