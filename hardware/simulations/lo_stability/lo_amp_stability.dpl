@@ -1,0 +1,40 @@
+<Qucs Schematic 0.0.19>
+<Properties>
+  <View=0,-100,800,1379,1,34,180>
+  <Grid=10,10,0>
+  <DataSet=lo_amp_stability.dat>
+  <DataDisplay=lo_amp_stability.sch>
+  <OpenDisplay=1>
+  <Script=lo_amp_stability.m>
+  <RunScript=0>
+  <showFrame=0>
+  <FrameText0=Title>
+  <FrameText1=Drawn By:>
+  <FrameText2=Date:>
+  <FrameText3=Revision:>
+</Properties>
+<Symbol>
+</Symbol>
+<Components>
+</Components>
+<Wires>
+</Wires>
+<Diagrams>
+  <Rect 180 467 524 247 3 #c0c0c0 1 00 1 0 2e+09 7e+09 1 6 2 12.9601 1 -1 1 1 315 0 225 "" "" "">
+	<"dBS21" #0000ff 0 3 0 0 0>
+	  <Mkr 8.37189e+06 61 -272 3 0 0>
+  </Rect>
+  <Rect 190 817 515 277 3 #c0c0c0 1 00 1 0 2e+09 7e+09 1 -20 10 2.60889 1 -1 1 1 315 0 225 "" "" "">
+	<"dBS11" #0000ff 0 3 0 0 0>
+	  <Mkr 3.61027e+06 60 -172 3 0 0>
+	<"dBS22" #ff0000 0 3 0 0 0>
+  </Rect>
+  <Rect 180 1221 545 321 3 #c0c0c0 1 00 1 0 1e+09 7e+09 1 0.964407 0.2 2 1 -1 0.5 1 315 0 225 "" "" "">
+	<"Mu" #0000ff 0 3 0 0 0>
+	  <Mkr 8.00936e+06 61 -118 3 0 0>
+	  <Mkr 3.45175e+07 63 -146 3 0 0>
+	<"Mu2" #ff0000 0 3 0 0 0>
+  </Rect>
+</Diagrams>
+<Paintings>
+</Paintings>

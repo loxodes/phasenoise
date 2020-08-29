@@ -27,7 +27,7 @@ F 3 "https://www.minicircuits.com/pdfs/SYM-63LH+.pdf" H 2750 3200 50  0001 C CNN
 	1    2750 3200
 	1    0    0    -1  
 $EndComp
-Text Notes 2900 1000 0    59   ~ 0
+Text Notes 2900 750  0    59   ~ 0
 Use absorbptive filter if possible:\nhttps://www.markimicrowave.com/blog/dc-offset-and-mixers-as-microwave-phase-detectors/\nhttps://www.analog.com/en/technical-articles/improving-linearity-by-using-absorptive-filters.html\n
 $Comp
 L power:GND #PWR0219
@@ -79,7 +79,7 @@ L Device:C_Small C702
 U 1 1 5F81396C
 P 2750 4100
 F 0 "C702" H 2658 4146 50  0000 R CNN
-F 1 "DNI" H 2658 4055 50  0000 R CNN
+F 1 "1 nF" H 2658 4055 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 2750 4100 50  0001 C CNN
 F 3 "~" H 2750 4100 50  0001 C CNN
 	1    2750 4100
@@ -121,7 +121,7 @@ P 4250 5750
 AR Path="/5F265927/5F880606" Ref="R702"  Part="1" 
 AR Path="/5F4ECD93/5F880606" Ref="R?"  Part="1" 
 F 0 "R702" H 4309 5796 50  0000 L CNN
-F 1 "R_Small" H 4309 5705 50  0000 L CNN
+F 1 "BLM15GG471" H 4309 5705 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4250 5750 50  0001 C CNN
 F 3 "~" H 4250 5750 50  0001 C CNN
 	1    4250 5750
@@ -164,7 +164,7 @@ P 5000 6200
 AR Path="/5F265927/5F88061A" Ref="C710"  Part="1" 
 AR Path="/5F4ECD93/5F88061A" Ref="C?"  Part="1" 
 F 0 "C710" H 4908 6154 50  0000 R CNN
-F 1 "C_Small" H 4908 6245 50  0000 R CNN
+F 1 "1 uF" H 4908 6245 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 5000 6200 50  0001 C CNN
 F 3 "~" H 5000 6200 50  0001 C CNN
 	1    5000 6200
@@ -177,7 +177,7 @@ P 4500 6200
 AR Path="/5F265927/5F880620" Ref="C709"  Part="1" 
 AR Path="/5F4ECD93/5F880620" Ref="C?"  Part="1" 
 F 0 "C709" H 4408 6154 50  0000 R CNN
-F 1 "C_Small" H 4408 6245 50  0000 R CNN
+F 1 "10 nF" H 4408 6245 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4500 6200 50  0001 C CNN
 F 3 "~" H 4500 6200 50  0001 C CNN
 	1    4500 6200
@@ -212,7 +212,7 @@ P 4450 7200
 AR Path="/5F265927/5F880631" Ref="C708"  Part="1" 
 AR Path="/5F4ECD93/5F880631" Ref="C?"  Part="1" 
 F 0 "C708" H 4358 7154 50  0000 R CNN
-F 1 "C_Small" H 4358 7245 50  0000 R CNN
+F 1 "10 nF" H 4358 7245 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4450 7200 50  0001 C CNN
 F 3 "~" H 4450 7200 50  0001 C CNN
 	1    4450 7200
@@ -253,7 +253,7 @@ F 3 "https://www.ti.com/lit/ds/symlink/opa2211a.pdf" H 4350 6700 50  0001 C CNN
 	3    4350 6700
 	1    0    0    -1  
 $EndComp
-Text Notes 10400 4050 0    50   ~ 0
+Text Notes 8400 4400 0    50   ~ 0
 3 dB loss
 $Comp
 L vna:OPA2211 U703
@@ -269,27 +269,20 @@ $EndComp
 $Comp
 L Device:R_Small R719
 U 1 1 5FC572E3
-P 8450 2450
-F 0 "R719" V 8254 2450 50  0000 C CNN
-F 1 "R_Small" V 8345 2450 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 8450 2450 50  0001 C CNN
-F 3 "~" H 8450 2450 50  0001 C CNN
-	1    8450 2450
+P 8450 2150
+F 0 "R719" V 8254 2150 50  0000 C CNN
+F 1 "1k" V 8345 2150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8450 2150 50  0001 C CNN
+F 3 "~" H 8450 2150 50  0001 C CNN
+	1    8450 2150
 	0    1    1    0   
 $EndComp
-Text Notes 8700 4100 0    50   ~ 0
-24 dB of gain
-Text Notes 8150 3900 0    50   ~ 0
-Av = 4
 Wire Wire Line
 	5600 2800 5600 3300
 Text Notes 4250 3800 0    50   ~ 0
 Av = 4
 Text Notes 5900 5900 0    50   ~ 0
 want to be able to measure -160 dBc/Hz signal @ 1 MHz offset\nassume max convserion loss of 10 dB, 0 dBm input\n-170 dBc/Hz..\n\nADC has 100 dB SFDR, 2.5 MSPS (60 dB gain), so DANL of 160 dBFS/Hz\nfull scale is 5Vpp 100 ohms, so 15 dBm\nDANL of 145 dBm/Hz\nNeed about 25 dB of gain
-Connection ~ 3850 3200
-Wire Wire Line
-	3850 2950 3850 3200
 Wire Wire Line
 	3850 2350 3850 2750
 Wire Wire Line
@@ -356,7 +349,7 @@ L Device:R_Small R716
 U 1 1 5FB903A7
 P 8250 4200
 F 0 "R716" V 8054 4200 50  0000 C CNN
-F 1 "R_Small" V 8145 4200 50  0000 C CNN
+F 1 "0" V 8145 4200 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 8250 4200 50  0001 C CNN
 F 3 "~" H 8250 4200 50  0001 C CNN
 	1    8250 4200
@@ -367,7 +360,7 @@ L Device:R_Small R714
 U 1 1 5FB8E681
 P 7950 4500
 F 0 "R714" V 7754 4500 50  0000 C CNN
-F 1 "R_Small" V 7845 4500 50  0000 C CNN
+F 1 "DNI" V 7845 4500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 7950 4500 50  0001 C CNN
 F 3 "~" H 7950 4500 50  0001 C CNN
 	1    7950 4500
@@ -378,7 +371,7 @@ L Device:R_Small R713
 U 1 1 5FB8E3F4
 P 7750 4200
 F 0 "R713" V 7554 4200 50  0000 C CNN
-F 1 "R_Small" V 7645 4200 50  0000 C CNN
+F 1 "0" V 7645 4200 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 7750 4200 50  0001 C CNN
 F 3 "~" H 7750 4200 50  0001 C CNN
 	1    7750 4200
@@ -426,7 +419,7 @@ L Device:R_Small R712
 U 1 1 5F84A8A3
 P 6500 4200
 F 0 "R712" V 6304 4200 50  0000 C CNN
-F 1 "R_Small" V 6395 4200 50  0000 C CNN
+F 1 "0" V 6395 4200 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 6500 4200 50  0001 C CNN
 F 3 "~" H 6500 4200 50  0001 C CNN
 	1    6500 4200
@@ -437,7 +430,7 @@ L Device:R_Small R711
 U 1 1 5F83BC5B
 P 6450 3300
 F 0 "R711" V 6254 3300 50  0000 C CNN
-F 1 "R_Small" V 6345 3300 50  0000 C CNN
+F 1 "17" V 6345 3300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 6450 3300 50  0001 C CNN
 F 3 "~" H 6450 3300 50  0001 C CNN
 	1    6450 3300
@@ -448,7 +441,7 @@ L Device:R_Small R710
 U 1 1 5F83B189
 P 6150 3550
 F 0 "R710" H 6091 3504 50  0000 R CNN
-F 1 "R_Small" H 6091 3595 50  0000 R CNN
+F 1 "17" H 6091 3595 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 6150 3550 50  0001 C CNN
 F 3 "~" H 6150 3550 50  0001 C CNN
 	1    6150 3550
@@ -459,7 +452,7 @@ L Device:R_Small R708
 U 1 1 5F83ADC5
 P 5850 3300
 F 0 "R708" V 5654 3300 50  0000 C CNN
-F 1 "R_Small" V 5745 3300 50  0000 C CNN
+F 1 "17" V 5745 3300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 5850 3300 50  0001 C CNN
 F 3 "~" H 5850 3300 50  0001 C CNN
 	1    5850 3300
@@ -486,18 +479,16 @@ F 3 "~" H 5150 2800 50  0001 C CNN
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	4750 3750 4750 3800
-Wire Wire Line
-	4850 3400 4750 3400
+	4750 4100 4750 4150
 $Comp
 L power:GND #PWR0228
 U 1 1 5F82A20D
-P 4750 3800
-F 0 "#PWR0228" H 4750 3550 50  0001 C CNN
-F 1 "GND" H 4755 3627 50  0000 C CNN
-F 2 "" H 4750 3800 50  0001 C CNN
-F 3 "" H 4750 3800 50  0001 C CNN
-	1    4750 3800
+P 4750 4150
+F 0 "#PWR0228" H 4750 3900 50  0001 C CNN
+F 1 "GND" H 4755 3977 50  0000 C CNN
+F 2 "" H 4750 4150 50  0001 C CNN
+F 3 "" H 4750 4150 50  0001 C CNN
+	1    4750 4150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -548,17 +539,6 @@ F 3 "~" H 3200 4250 50  0001 C CNN
 	1    3200 4250
 	0    1    -1   0   
 $EndComp
-$Comp
-L Connector:Conn_Coaxial J701
-U 1 1 5F80F20D
-P 3700 4250
-F 0 "J701" H 3628 4488 50  0000 C CNN
-F 1 "Conn_Coaxial" H 3628 4397 50  0000 C CNN
-F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 3700 4250 50  0001 C CNN
-F 3 " ~" H 3700 4250 50  0001 C CNN
-	1    3700 4250
-	1    0    0    -1  
-$EndComp
 Text HLabel 9300 4200 2    59   Output ~ 0
 REF_PHDET
 Text HLabel 9350 3200 2    59   Output ~ 0
@@ -581,7 +561,7 @@ L Device:R_Small R709
 U 1 1 5FBE4B6C
 P 6150 2950
 F 0 "R709" H 6091 2904 50  0000 R CNN
-F 1 "R_Small" H 6091 2995 50  0000 R CNN
+F 1 "DNI" H 6091 2995 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 6150 2950 50  0001 C CNN
 F 3 "~" H 6150 2950 50  0001 C CNN
 	1    6150 2950
@@ -633,52 +613,44 @@ Wire Wire Line
 $Comp
 L Device:R_Small R706
 U 1 1 5FD08D17
-P 4750 3650
-F 0 "R706" V 4554 3650 50  0000 C CNN
-F 1 "R_Small" V 4645 3650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 4750 3650 50  0001 C CNN
-F 3 "~" H 4750 3650 50  0001 C CNN
-	1    4750 3650
+P 4750 4000
+F 0 "R706" V 4554 4000 50  0000 C CNN
+F 1 "DNI" V 4645 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 4750 4000 50  0001 C CNN
+F 3 "~" H 4750 4000 50  0001 C CNN
+	1    4750 4000
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	4750 3400 4750 3550
 $Comp
 L Device:R_Small R704
 U 1 1 5FD0D558
 P 4450 3400
 F 0 "R704" V 4254 3400 50  0000 C CNN
-F 1 "R_Small" V 4345 3400 50  0000 C CNN
+F 1 "DNI" V 4345 3400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4450 3400 50  0001 C CNN
 F 3 "~" H 4450 3400 50  0001 C CNN
 	1    4450 3400
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	4550 3400 4750 3400
-Connection ~ 4750 3400
-Wire Wire Line
 	4350 3400 4150 3400
 Wire Wire Line
 	4150 3400 4150 3200
 Wire Wire Line
-	3850 3200 4150 3200
-Wire Wire Line
 	4150 3200 4350 3200
-Connection ~ 4150 3200
 Wire Wire Line
 	4750 2800 5050 2800
 Wire Wire Line
 	5250 2800 5600 2800
 Wire Wire Line
-	8550 2450 8900 2450
+	8550 2150 8900 2150
 $Comp
 L Device:C_Small C711
 U 1 1 5FD3492A
 P 5150 2450
 F 0 "C711" V 5379 2450 50  0000 C CNN
 F 1 "DNI" V 5288 2450 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 5150 2450 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5150 2450 50  0001 C CNN
 F 3 "~" H 5150 2450 50  0001 C CNN
 	1    5150 2450
 	0    1    -1   0   
@@ -694,34 +666,25 @@ Connection ~ 4750 2450
 $Comp
 L Device:C_Small C707
 U 1 1 5FD4D2B0
-P 3550 2850
-F 0 "C707" V 3779 2850 50  0000 C CNN
-F 1 "DNI" V 3688 2850 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3550 2850 50  0001 C CNN
-F 3 "~" H 3550 2850 50  0001 C CNN
-	1    3550 2850
-	-1   0    0    -1  
+P 3250 3400
+F 0 "C707" V 3479 3400 50  0000 C CNN
+F 1 "DNI" V 3388 3400 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3250 3400 50  0001 C CNN
+F 3 "~" H 3250 3400 50  0001 C CNN
+	1    3250 3400
+	1    0    0    1   
 $EndComp
-Wire Wire Line
-	3150 3200 3550 3200
 $Comp
 L power:GND #PWR0232
 U 1 1 5FD4F821
-P 3550 2500
-F 0 "#PWR0232" H 3550 2250 50  0001 C CNN
-F 1 "GND" H 3555 2327 50  0000 C CNN
-F 2 "" H 3550 2500 50  0001 C CNN
-F 3 "" H 3550 2500 50  0001 C CNN
-	1    3550 2500
-	-1   0    0    1   
+P 3250 3600
+F 0 "#PWR0232" H 3250 3350 50  0001 C CNN
+F 1 "GND" H 3255 3427 50  0000 C CNN
+F 2 "" H 3250 3600 50  0001 C CNN
+F 3 "" H 3250 3600 50  0001 C CNN
+	1    3250 3600
+	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3550 2500 3550 2750
-Wire Wire Line
-	3550 2950 3550 3200
-Connection ~ 3550 3200
-Wire Wire Line
-	3550 3200 3850 3200
 Wire Wire Line
 	5250 2450 5600 2450
 Wire Wire Line
@@ -733,83 +696,71 @@ Connection ~ 5600 3300
 $Comp
 L Device:R_Small R717
 U 1 1 5FD6E373
-P 8450 1350
-F 0 "R717" V 8254 1350 50  0000 C CNN
-F 1 "R_Small" V 8345 1350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 8450 1350 50  0001 C CNN
-F 3 "~" H 8450 1350 50  0001 C CNN
-	1    8450 1350
+P 8450 1100
+F 0 "R717" V 8254 1100 50  0000 C CNN
+F 1 "0" V 8345 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8450 1100 50  0001 C CNN
+F 3 "~" H 8450 1100 50  0001 C CNN
+	1    8450 1100
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_Small R715
 U 1 1 5FD6E71F
-P 8150 1000
-F 0 "R715" V 7954 1000 50  0000 C CNN
-F 1 "R_Small" V 8045 1000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 8150 1000 50  0001 C CNN
-F 3 "~" H 8150 1000 50  0001 C CNN
-	1    8150 1000
+P 8100 850
+F 0 "R715" V 7904 850 50  0000 C CNN
+F 1 "100" V 7995 850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8100 850 50  0001 C CNN
+F 3 "~" H 8100 850 50  0001 C CNN
+	1    8100 850 
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8900 1350 8550 1350
-Text Notes 8400 750  0    50   ~ 0
+	8900 1100 8550 1100
+Text Notes 8400 700  0    50   ~ 0
 variable gain amplifier, switch between 10 v/v and 1 v/v\nfrom https://www.analog.com/media/en/training-seminars/tutorials/MT-072.pdf
 $Comp
 L power:GND #PWR0233
 U 1 1 5FD77155
-P 8150 850
-F 0 "#PWR0233" H 8150 600 50  0001 C CNN
-F 1 "GND" H 8155 677 50  0000 C CNN
-F 2 "" H 8150 850 50  0001 C CNN
-F 3 "" H 8150 850 50  0001 C CNN
-	1    8150 850 
+P 8100 700
+F 0 "#PWR0233" H 8100 450 50  0001 C CNN
+F 1 "GND" H 8105 527 50  0000 C CNN
+F 2 "" H 8100 700 50  0001 C CNN
+F 3 "" H 8100 700 50  0001 C CNN
+	1    8100 700 
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8150 850  8150 900 
-Wire Wire Line
-	8350 1350 8150 1350
-Wire Wire Line
-	8150 1100 8150 1350
-Connection ~ 8150 1350
+	8100 700  8100 750 
 Wire Wire Line
 	6600 4200 7350 4200
 Connection ~ 7350 4200
-Wire Wire Line
-	6550 3300 8150 3300
-Wire Wire Line
-	8900 1350 8900 1750
 $Comp
 L Device:R_Small R718
 U 1 1 5FDD2CC5
-P 8450 1750
-F 0 "R718" V 8254 1750 50  0000 C CNN
-F 1 "R_Small" V 8345 1750 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 8450 1750 50  0001 C CNN
-F 3 "~" H 8450 1750 50  0001 C CNN
-	1    8450 1750
+P 8450 1500
+F 0 "R718" V 8254 1500 50  0000 C CNN
+F 1 "0" V 8345 1500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8450 1500 50  0001 C CNN
+F 3 "~" H 8450 1500 50  0001 C CNN
+	1    8450 1500
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	8550 1750 8900 1750
-Connection ~ 8900 1750
+	8550 1500 8900 1500
 Wire Wire Line
 	7500 3100 8150 3100
-Wire Wire Line
-	7500 1350 8150 1350
 Text Notes 9300 2250 0    50   ~ 0
 Use ADG621\n(start with MAX323 symbol)
 $Comp
 L vna:ADG621 U702
 U 2 1 5FE40F19
-P 8000 1750
-F 0 "U702" H 8000 2017 50  0000 C CNN
-F 1 "ADG621" H 8000 1926 50  0000 C CNN
-F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 8000 1650 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG621.pdf" H 8000 1750 50  0001 C CNN
-	2    8000 1750
+P 8000 1500
+F 0 "U702" H 8000 1767 50  0000 C CNN
+F 1 "ADG621" H 8000 1676 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 8000 1400 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG621.pdf" H 8000 1500 50  0001 C CNN
+	2    8000 1500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -826,52 +777,39 @@ $EndComp
 $Comp
 L vna:ADG621 U702
 U 1 1 5FE439E0
-P 8000 2450
-F 0 "U702" H 7650 2750 50  0000 L CNN
-F 1 "ADG621" H 7650 2650 50  0000 L CNN
-F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 8000 2350 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG621.pdf" H 8000 2450 50  0001 C CNN
-	1    8000 2450
+P 8000 2150
+F 0 "U702" H 7650 2450 50  0000 L CNN
+F 1 "ADG621" H 7650 2350 50  0000 L CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 8000 2050 50  0001 C CNN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADG621.pdf" H 8000 2150 50  0001 C CNN
+	1    8000 2150
 	1    0    0    -1  
 $EndComp
-Text HLabel 8100 2000 2    50   Input ~ 0
+Text HLabel 8100 1750 2    50   Input ~ 0
 IF_G1
-Text HLabel 8100 2700 2    50   Input ~ 0
+Text HLabel 8100 2400 2    50   Input ~ 0
 IF_G2
 Wire Wire Line
 	8750 3200 8900 3200
-Connection ~ 8900 2450
 Wire Wire Line
-	8900 1750 8900 2450
+	8300 1500 8350 1500
 Wire Wire Line
-	8300 1750 8350 1750
-Wire Wire Line
-	8300 2450 8350 2450
-Wire Wire Line
-	7500 1350 7500 1750
-Wire Wire Line
-	8900 2450 8900 3200
+	8300 2150 8350 2150
 Connection ~ 8900 3200
 Wire Wire Line
 	8900 3200 9350 3200
 Wire Wire Line
-	7700 2450 7500 2450
-Connection ~ 7500 2450
+	7700 2150 7500 2150
 Wire Wire Line
-	7500 2450 7500 3100
+	7700 1500 7500 1500
 Wire Wire Line
-	7700 1750 7500 1750
-Connection ~ 7500 1750
+	8000 1700 8000 1750
 Wire Wire Line
-	7500 1750 7500 2450
+	8000 1750 8100 1750
 Wire Wire Line
-	8000 1950 8000 2000
+	8000 2400 8100 2400
 Wire Wire Line
-	8000 2000 8100 2000
-Wire Wire Line
-	8000 2700 8100 2700
-Wire Wire Line
-	8000 2650 8000 2700
+	8000 2350 8000 2400
 $Comp
 L power:-3V3 #PWR0235
 U 1 1 606C657B
@@ -1030,7 +968,7 @@ P 2950 5700
 AR Path="/5F265927/5F4D9089" Ref="R720"  Part="1" 
 AR Path="/5F4ECD93/5F4D9089" Ref="R?"  Part="1" 
 F 0 "R720" H 3009 5746 50  0000 L CNN
-F 1 "R_Small" H 3009 5655 50  0000 L CNN
+F 1 "BLM15GG471" H 3009 5655 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 2950 5700 50  0001 C CNN
 F 3 "~" H 2950 5700 50  0001 C CNN
 	1    2950 5700
@@ -1038,4 +976,204 @@ F 3 "~" H 2950 5700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2950 5550 2950 5600
+$Comp
+L power:GND #PWR0307
+U 1 1 5F54D17E
+P 3600 3600
+F 0 "#PWR0307" H 3600 3350 50  0001 C CNN
+F 1 "GND" H 3605 3427 50  0000 C CNN
+F 2 "" H 3600 3600 50  0001 C CNN
+F 3 "" H 3600 3600 50  0001 C CNN
+	1    3600 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R721
+U 1 1 5F54D6F5
+P 3600 3400
+F 0 "R721" H 3541 3354 50  0000 R CNN
+F 1 "50" H 3541 3445 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3600 3400 50  0001 C CNN
+F 3 "~" H 3600 3400 50  0001 C CNN
+	1    3600 3400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3250 3600 3250 3500
+Wire Wire Line
+	3600 3600 3600 3500
+Wire Wire Line
+	3250 3300 3250 3200
+Text Notes 4200 1600 0    50   ~ 0
+Use Sallen-Key low pass filter
+$Comp
+L Device:C_Small C715
+U 1 1 5F5B8CAD
+P 4600 4550
+F 0 "C715" V 4829 4550 50  0000 C CNN
+F 1 "DNI" V 4738 4550 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4600 4550 50  0001 C CNN
+F 3 "~" H 4600 4550 50  0001 C CNN
+	1    4600 4550
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	4750 3750 4750 3900
+$Comp
+L Device:C_Small C714
+U 1 1 5F5D3B3C
+P 4500 4000
+F 0 "C714" V 4729 4000 50  0000 C CNN
+F 1 "DNI" V 4638 4000 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4500 4000 50  0001 C CNN
+F 3 "~" H 4500 4000 50  0001 C CNN
+	1    4500 4000
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0308
+U 1 1 5F5D4181
+P 4500 4150
+F 0 "#PWR0308" H 4500 3900 50  0001 C CNN
+F 1 "GND" H 4505 3977 50  0000 C CNN
+F 2 "" H 4500 4150 50  0001 C CNN
+F 3 "" H 4500 4150 50  0001 C CNN
+	1    4500 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4100 4500 4150
+Wire Wire Line
+	4500 3900 4500 3750
+Wire Wire Line
+	4500 3750 4750 3750
+Wire Wire Line
+	4550 3400 4750 3400
+Wire Wire Line
+	4750 3750 4750 3400
+Connection ~ 4750 3750
+Connection ~ 4750 3400
+Wire Wire Line
+	4750 3400 4850 3400
+Wire Wire Line
+	4700 4550 5600 4550
+Wire Wire Line
+	5600 3300 5600 4550
+Wire Wire Line
+	4150 4550 4150 3400
+Wire Wire Line
+	4150 4550 4500 4550
+Connection ~ 4150 3400
+Wire Wire Line
+	3150 3200 3250 3200
+$Comp
+L Device:R_Small R722
+U 1 1 5F605B2C
+P 4000 3200
+F 0 "R722" H 3941 3154 50  0000 R CNN
+F 1 "0" H 3941 3245 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 4000 3200 50  0001 C CNN
+F 3 "~" H 4000 3200 50  0001 C CNN
+	1    4000 3200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4100 3200 4150 3200
+Connection ~ 4150 3200
+Wire Wire Line
+	3900 3200 3850 3200
+Wire Wire Line
+	3850 3200 3850 2950
+Wire Wire Line
+	3250 3200 3600 3200
+Connection ~ 3250 3200
+Connection ~ 3600 3200
+Wire Wire Line
+	3600 3200 3600 3300
+Wire Wire Line
+	3600 3200 3850 3200
+Connection ~ 3850 3200
+$Comp
+L Device:C_Small C716
+U 1 1 5F643C7F
+P 8000 2750
+F 0 "C716" V 8229 2750 50  0000 C CNN
+F 1 "DNI" V 8138 2750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8000 2750 50  0001 C CNN
+F 3 "~" H 8000 2750 50  0001 C CNN
+	1    8000 2750
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	8100 2750 8900 2750
+Wire Wire Line
+	7900 2750 7500 2750
+$Comp
+L Device:R_Small R724
+U 1 1 5F675743
+P 8900 1800
+F 0 "R724" V 8704 1800 50  0000 C CNN
+F 1 "10k" V 8795 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 8900 1800 50  0001 C CNN
+F 3 "~" H 8900 1800 50  0001 C CNN
+	1    8900 1800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7500 1100 7500 1500
+Wire Wire Line
+	8900 1100 8900 1500
+Connection ~ 7500 1500
+Connection ~ 7500 2150
+Wire Wire Line
+	7500 2150 7500 2750
+Wire Wire Line
+	7500 1500 7500 2150
+Connection ~ 7500 2750
+Wire Wire Line
+	7500 2750 7500 3100
+Connection ~ 8900 2750
+Wire Wire Line
+	8900 2750 8900 3200
+Wire Wire Line
+	8900 2150 8900 2750
+Wire Wire Line
+	8900 1900 8900 2150
+Connection ~ 8900 2150
+Wire Wire Line
+	8900 1700 8900 1500
+Connection ~ 8900 1500
+$Comp
+L Device:R_Small R723
+U 1 1 5F6B69B7
+P 7800 1100
+F 0 "R723" V 7604 1100 50  0000 C CNN
+F 1 "DNI" V 7695 1100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 7800 1100 50  0001 C CNN
+F 3 "~" H 7800 1100 50  0001 C CNN
+	1    7800 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 1100 7500 1100
+Wire Wire Line
+	7900 1100 8100 1100
+Wire Wire Line
+	8100 950  8100 1100
+Connection ~ 8100 1100
+Wire Wire Line
+	8100 1100 8350 1100
+Wire Wire Line
+	6550 3300 8150 3300
+$Comp
+L Connector:Conn_Coaxial J701
+U 1 1 5F80F20D
+P 3700 4250
+F 0 "J701" H 3628 4488 50  0000 C CNN
+F 1 "Conn_Coaxial" H 3628 4397 50  0000 C CNN
+F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 3700 4250 50  0001 C CNN
+F 3 " ~" H 3700 4250 50  0001 C CNN
+	1    3700 4250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
