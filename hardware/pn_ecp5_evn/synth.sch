@@ -990,8 +990,6 @@ Wire Wire Line
 	7500 5300 7600 5300
 Wire Wire Line
 	7800 5300 7950 5300
-Text Notes 7100 2750 0    50   ~ 10
-TODO:\nCheck stability of LO amplifier with bias network
 Text Notes 1700 4000 0    50   ~ 0
 AC coupled, max input 2Vpp
 Wire Wire Line

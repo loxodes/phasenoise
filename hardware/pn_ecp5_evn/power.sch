@@ -24,8 +24,6 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADM7170
 	1    5500 2250
 	1    0    0    -1  
 $EndComp
-Text Notes 5400 900  0    50   ~ 0
-TODO:\n- Add 3.3VA filtered 3.3V supply\n- Add -3.3V analog supply\n- Wire up 3.3V supply
 $Comp
 L Regulator_SwitchedCapacitor:LM27761 U501
 U 1 1 5F891C8B
