@@ -21,6 +21,8 @@ F 0 "U502" H 5500 2665 50  0000 C CNN
 F 1 "ADM7171ACPZ-3.3-R7" H 5500 2574 50  0000 C CNN
 F 2 "Package_DFN_QFN:DFN-8-1EP_3x3mm_P0.5mm_EP1.66x2.38mm" H 5350 2750 50  0001 C CNN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADM7170.pdf" H 5450 2550 50  0001 C CNN
+F 4 "Digi-Key" H 5500 2250 50  0001 C CNN "Distributor"
+F 5 "ADM7171ACPZ-3.3-R7CT-ND" H 5500 2250 50  0001 C CNN "Distributor Part Number"
 	1    5500 2250
 	1    0    0    -1  
 $EndComp
@@ -32,6 +34,8 @@ F 0 "U501" H 4700 5267 50  0000 C CNN
 F 1 "LM27761" H 4700 5176 50  0000 C CNN
 F 2 "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm" H 4850 4200 50  0001 L CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm27761.pdf" H 7200 4300 50  0001 C CNN
+F 4 "Digi-Key" H 4700 4700 50  0001 C CNN "Distributor"
+F 5 "296-44379-1-ND" H 4700 4700 50  0001 C CNN "Distributor Part Number"
 	1    4700 4700
 	1    0    0    -1  
 $EndComp
@@ -82,6 +86,7 @@ F 0 "R503" H 4709 2846 50  0000 L CNN
 F 1 "DNI" H 4709 2755 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4650 2800 50  0001 C CNN
 F 3 "~" H 4650 2800 50  0001 C CNN
+F 4 "N/A" H 4650 2800 50  0001 C CNN "Distributor Part Number"
 	1    4650 2800
 	1    0    0    -1  
 $EndComp
@@ -100,6 +105,8 @@ F 0 "R501" V 3754 2550 50  0000 C CNN
 F 1 "0" V 3845 2550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 3950 2550 50  0001 C CNN
 F 3 "~" H 3950 2550 50  0001 C CNN
+F 4 "Digi-Key" H 3950 2550 50  0001 C CNN "Distributor"
+F 5 "P0.0JCT-ND " H 3950 2550 50  0001 C CNN "Distributor Part Number"
 	1    3950 2550
 	0    1    1    0   
 $EndComp
@@ -112,6 +119,7 @@ F 0 "C504" H 4542 1746 50  0000 L CNN
 F 1 "10 uF" H 4542 1655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 4450 1700 50  0001 C CNN
 F 3 "~" H 4450 1700 50  0001 C CNN
+F 4 "N/A" H 4450 1700 50  0001 C CNN "Distributor Part Number"
 	1    4450 1700
 	1    0    0    -1  
 $EndComp
@@ -123,6 +131,7 @@ F 0 "C502" H 4042 1746 50  0000 L CNN
 F 1 "1 uF" H 4042 1655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3950 1700 50  0001 C CNN
 F 3 "~" H 3950 1700 50  0001 C CNN
+F 4 "N/A" H 3950 1700 50  0001 C CNN "Distributor Part Number"
 	1    3950 1700
 	1    0    0    -1  
 $EndComp
@@ -183,6 +192,8 @@ F 0 "TP504" H 7108 1418 50  0000 L CNN
 F 1 "TestPoint" H 7108 1327 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 7250 1300 50  0001 C CNN
 F 3 "~" H 7250 1300 50  0001 C CNN
+F 4 "Digi-Key" H 7050 1300 50  0001 C CNN "Distributor"
+F 5 "36-5015CT-ND" H 7050 1300 50  0001 C CNN "Distributor Part Number"
 	1    7050 1300
 	-1   0    0    -1  
 $EndComp
@@ -201,6 +212,7 @@ F 0 "C508" H 6642 1746 50  0000 L CNN
 F 1 "1 uF" H 6642 1655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6550 1700 50  0001 C CNN
 F 3 "~" H 6550 1700 50  0001 C CNN
+F 4 "N/A" H 6550 1700 50  0001 C CNN "Distributor Part Number"
 	1    6550 1700
 	-1   0    0    -1  
 $EndComp
@@ -212,6 +224,7 @@ F 0 "C509" H 7142 1746 50  0000 L CNN
 F 1 "10 uF" H 7142 1655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 7050 1700 50  0001 C CNN
 F 3 "~" H 7050 1700 50  0001 C CNN
+F 4 "N/A" H 7050 1700 50  0001 C CNN "Distributor Part Number"
 	1    7050 1700
 	-1   0    0    -1  
 $EndComp
@@ -267,6 +280,8 @@ F 0 "L501" V 7835 1450 50  0000 C CNN
 F 1 "BLM15GG471" V 7744 1450 50  0000 C CNN
 F 2 "Inductor_SMD:L_0402_1005Metric" H 7650 1450 50  0001 C CNN
 F 3 "~" H 7650 1450 50  0001 C CNN
+F 4 "Digi-Key" H 7650 1450 50  0001 C CNN "Distributor"
+F 5 "490-5198-1-ND" H 7650 1450 50  0001 C CNN "Distributor Part Number"
 	1    7650 1450
 	0    -1   -1   0   
 $EndComp
@@ -278,6 +293,7 @@ F 0 "C511" H 7992 1746 50  0000 L CNN
 F 1 "10 uF" H 7992 1655 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 7900 1700 50  0001 C CNN
 F 3 "~" H 7900 1700 50  0001 C CNN
+F 4 "N/A" H 7900 1700 50  0001 C CNN "Distributor Part Number"
 	1    7900 1700
 	-1   0    0    -1  
 $EndComp
@@ -317,6 +333,7 @@ F 0 "C506" H 6192 2896 50  0000 L CNN
 F 1 "1 nF" H 6192 2805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6100 2850 50  0001 C CNN
 F 3 "~" H 6100 2850 50  0001 C CNN
+F 4 "N/A" H 6100 2850 50  0001 C CNN "Distributor Part Number"
 	1    6100 2850
 	-1   0    0    -1  
 $EndComp
@@ -356,6 +373,7 @@ F 0 "C503" H 4192 4896 50  0000 L CNN
 F 1 "1 uF" H 4192 4805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4100 4850 50  0001 C CNN
 F 3 "~" H 4100 4850 50  0001 C CNN
+F 4 "N/A" H 4100 4850 50  0001 C CNN "Distributor Part Number"
 	1    4100 4850
 	-1   0    0    -1  
 $EndComp
@@ -375,6 +393,8 @@ F 0 "TP503" H 5858 4268 50  0000 L CNN
 F 1 "TestPoint" H 5858 4177 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 6000 4150 50  0001 C CNN
 F 3 "~" H 6000 4150 50  0001 C CNN
+F 4 "Digi-Key" H 5800 4150 50  0001 C CNN "Distributor"
+F 5 "36-5015CT-ND" H 5800 4150 50  0001 C CNN "Distributor Part Number"
 	1    5800 4150
 	-1   0    0    -1  
 $EndComp
@@ -434,6 +454,7 @@ F 0 "D501" V 8946 1530 50  0000 R CNN
 F 1 "RED" V 8855 1530 50  0000 R CNN
 F 2 "LED_SMD:LED_0603_1608Metric" V 8900 1600 50  0001 C CNN
 F 3 "~" V 8900 1600 50  0001 C CNN
+F 4 "N/A" H 8900 1600 50  0001 C CNN "Distributor Part Number"
 	1    8900 1600
 	0    -1   -1   0   
 $EndComp
@@ -447,6 +468,7 @@ F 0 "R507" H 8959 2046 50  0000 L CNN
 F 1 "10k" H 8959 1955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 8900 2000 50  0001 C CNN
 F 3 "~" H 8900 2000 50  0001 C CNN
+F 4 "N/A" H 8900 2000 50  0001 C CNN "Distributor Part Number"
 	1    8900 2000
 	1    0    0    -1  
 $EndComp
@@ -473,6 +495,7 @@ F 0 "D502" V 9504 1698 50  0000 L CNN
 F 1 "RED" V 9595 1698 50  0000 L CNN
 F 2 "LED_SMD:LED_0603_1608Metric" V 9550 1600 50  0001 C CNN
 F 3 "~" V 9550 1600 50  0001 C CNN
+F 4 "N/A" H 9550 1600 50  0001 C CNN "Distributor Part Number"
 	1    9550 1600
 	0    1    1    0   
 $EndComp
@@ -484,6 +507,7 @@ F 0 "R508" H 9609 2046 50  0000 L CNN
 F 1 "10k" H 9609 1955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 9550 2000 50  0001 C CNN
 F 3 "~" H 9550 2000 50  0001 C CNN
+F 4 "N/A" H 9550 2000 50  0001 C CNN "Distributor Part Number"
 	1    9550 2000
 	1    0    0    -1  
 $EndComp
@@ -558,6 +582,8 @@ F 0 "U503" H 8450 4865 50  0000 C CNN
 F 1 "TPS72301DB" H 8450 4774 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-23-5" H 8450 5000 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/tps723.pdf" H 8450 4600 50  0001 C CNN
+F 4 "Digi-Key" H 8450 4500 50  0001 C CNN "Distributor"
+F 5 "TPS72301DBVR" H 8450 4500 50  0001 C CNN "Distributor Part Number"
 	1    8450 4500
 	1    0    0    -1  
 $EndComp
@@ -587,6 +613,8 @@ F 0 "R502" V 3804 4300 50  0000 C CNN
 F 1 "0" V 3895 4300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4000 4300 50  0001 C CNN
 F 3 "~" H 4000 4300 50  0001 C CNN
+F 4 "Digi-Key" H 4000 4300 50  0001 C CNN "Distributor"
+F 5 "P0.0JCT-ND " H 4000 4300 50  0001 C CNN "Distributor Part Number"
 	1    4000 4300
 	1    0    0    -1  
 $EndComp
@@ -630,6 +658,7 @@ F 0 "C505" H 5592 5146 50  0000 L CNN
 F 1 "10 uF" H 5592 5055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 5500 5100 50  0001 C CNN
 F 3 "~" H 5500 5100 50  0001 C CNN
+F 4 "N/A" H 5500 5100 50  0001 C CNN "Distributor Part Number"
 	1    5500 5100
 	-1   0    0    -1  
 $EndComp
@@ -658,6 +687,7 @@ F 0 "R504" V 5604 4500 50  0000 C CNN
 F 1 "88.7k" V 5695 4500 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 5800 4500 50  0001 C CNN
 F 3 "~" H 5800 4500 50  0001 C CNN
+F 4 "N/A" H 5800 4500 50  0001 C CNN "Distributor Part Number"
 	1    5800 4500
 	1    0    0    -1  
 $EndComp
@@ -669,6 +699,7 @@ F 0 "R505" V 5604 4850 50  0000 C CNN
 F 1 "49.9k" V 5695 4850 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 5800 4850 50  0001 C CNN
 F 3 "~" H 5800 4850 50  0001 C CNN
+F 4 "N/A" H 5800 4850 50  0001 C CNN "Distributor Part Number"
 	1    5800 4850
 	1    0    0    -1  
 $EndComp
@@ -700,6 +731,7 @@ F 0 "C507" H 5850 4900 50  0000 L CNN
 F 1 "10 uF" H 5800 4800 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6200 4850 50  0001 C CNN
 F 3 "~" H 6200 4850 50  0001 C CNN
+F 4 "N/A" H 6200 4850 50  0001 C CNN "Distributor Part Number"
 	1    6200 4850
 	-1   0    0    -1  
 $EndComp
@@ -732,6 +764,8 @@ F 0 "R506" V 6254 4400 50  0000 C CNN
 F 1 "0" V 6345 4400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 6450 4400 50  0001 C CNN
 F 3 "~" H 6450 4400 50  0001 C CNN
+F 4 "Digi-Key" H 6450 4400 50  0001 C CNN "Distributor"
+F 5 "P0.0JCT-ND " H 6450 4400 50  0001 C CNN "Distributor Part Number"
 	1    6450 4400
 	0    1    1    0   
 $EndComp
@@ -749,6 +783,7 @@ F 0 "C501" H 3692 4896 50  0000 L CNN
 F 1 "10 uF" H 3692 4805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3600 4850 50  0001 C CNN
 F 3 "~" H 3600 4850 50  0001 C CNN
+F 4 "N/A" H 3600 4850 50  0001 C CNN "Distributor Part Number"
 	1    3600 4850
 	-1   0    0    -1  
 $EndComp
@@ -778,6 +813,7 @@ F 0 "C510" H 7792 4896 50  0000 L CNN
 F 1 "1 uF" H 7792 4805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7700 4850 50  0001 C CNN
 F 3 "~" H 7700 4850 50  0001 C CNN
+F 4 "N/A" H 7700 4850 50  0001 C CNN "Distributor Part Number"
 	1    7700 4850
 	-1   0    0    -1  
 $EndComp
@@ -789,6 +825,7 @@ F 0 "C512" H 10192 4846 50  0000 L CNN
 F 1 "10 uF" H 10192 4755 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 10100 4800 50  0001 C CNN
 F 3 "~" H 10100 4800 50  0001 C CNN
+F 4 "N/A" H 10100 4800 50  0001 C CNN "Distributor Part Number"
 	1    10100 4800
 	-1   0    0    -1  
 $EndComp
@@ -800,6 +837,7 @@ F 0 "R509" V 9404 4550 50  0000 C CNN
 F 1 "33k" V 9495 4550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 9600 4550 50  0001 C CNN
 F 3 "~" H 9600 4550 50  0001 C CNN
+F 4 "N/A" H 9600 4550 50  0001 C CNN "Distributor Part Number"
 	1    9600 4550
 	1    0    0    -1  
 $EndComp
@@ -811,6 +849,7 @@ F 0 "R510" V 9404 4950 50  0000 C CNN
 F 1 "64.9k" V 9495 4950 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 9600 4950 50  0001 C CNN
 F 3 "~" H 9600 4950 50  0001 C CNN
+F 4 "N/A" H 9600 4950 50  0001 C CNN "Distributor Part Number"
 	1    9600 4950
 	1    0    0    -1  
 $EndComp
@@ -881,6 +920,8 @@ F 0 "TP505" H 10158 4368 50  0000 L CNN
 F 1 "TestPoint" H 10158 4277 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 10300 4250 50  0001 C CNN
 F 3 "~" H 10300 4250 50  0001 C CNN
+F 4 "Digi-Key" H 10100 4250 50  0001 C CNN "Distributor"
+F 5 "36-5015CT-ND" H 10100 4250 50  0001 C CNN "Distributor Part Number"
 	1    10100 4250
 	-1   0    0    -1  
 $EndComp
@@ -900,6 +941,8 @@ F 0 "L502" V 10585 4400 50  0000 C CNN
 F 1 "BLM15GG471" V 10494 4400 50  0000 C CNN
 F 2 "Inductor_SMD:L_0402_1005Metric" H 10400 4400 50  0001 C CNN
 F 3 "~" H 10400 4400 50  0001 C CNN
+F 4 "Digi-Key" H 10400 4400 50  0001 C CNN "Distributor"
+F 5 "490-5198-1-ND" H 10400 4400 50  0001 C CNN "Distributor Part Number"
 	1    10400 4400
 	0    -1   -1   0   
 $EndComp
@@ -927,6 +970,8 @@ F 0 "D503" V 1546 1380 50  0000 R CNN
 F 1 "B3L30LP" V 1455 1380 50  0000 R CNN
 F 2 "vna:AP02002_DFN8_DIODE" V 1500 1450 50  0001 C CNN
 F 3 "~" V 1500 1450 50  0001 C CNN
+F 4 "B3L30LP-7DICT-ND" H 1500 1450 50  0001 C CNN "Distributor Part Number"
+F 5 "Digi-Key" H 1500 1450 50  0001 C CNN "Distributor"
 	1    1500 1450
 	-1   0    0    1   
 $EndComp
@@ -938,6 +983,8 @@ F 0 "L503" V 2085 1450 50  0000 C CNN
 F 1 "1 uH, LPWI252010S1R0T" V 2000 1200 50  0000 C CNN
 F 2 "Inductor_SMD:L_1008_2520Metric" H 1900 1450 50  0001 C CNN
 F 3 "~" H 1900 1450 50  0001 C CNN
+F 4 "Digi-Key" H 1900 1450 50  0001 C CNN "Distributor"
+F 5 "F10235CT-ND " H 1900 1450 50  0001 C CNN "Distributor Part Number"
 	1    1900 1450
 	0    -1   -1   0   
 $EndComp
@@ -972,6 +1019,8 @@ F 1 "270 uF" H 3142 1705 50  0000 L CNN
 F 2 "Capacitor_SMD:CP_Elec_6.3x5.9" H 3050 1750 50  0001 C CNN
 F 3 "~" H 3050 1750 50  0001 C CNN
 F 4 "875105245014" H 3050 1750 50  0001 C CNN "MPN"
+F 5 "Digi-Key" H 3050 1750 50  0001 C CNN "Distributor"
+F 6 "732-6414-1-ND" H 3050 1750 50  0001 C CNN "Distributor Part Number"
 	1    3050 1750
 	1    0    0    -1  
 $EndComp
@@ -1001,6 +1050,8 @@ F 0 "D504" V 1654 1820 50  0000 L CNN
 F 1 "5.1V" V 1745 1820 50  0000 L CNN
 F 2 "Diode_SMD:D_SOD-323" V 1700 1750 50  0001 C CNN
 F 3 "~" V 1700 1750 50  0001 C CNN
+F 4 "MM3Z5V1ST1GOSCT-ND" H 1700 1750 50  0001 C CNN "Distributor Part Number"
+F 5 "Digi-Key" H 1700 1750 50  0001 C CNN "Distributor"
 	1    1700 1750
 	0    1    1    0   
 $EndComp
@@ -1017,6 +1068,8 @@ F 0 "TP502" H 4958 1418 50  0000 L CNN
 F 1 "TestPoint" H 4958 1327 50  0000 L CNN
 F 2 "TestPoint:TestPoint_Keystone_5015_Micro-Minature" H 5100 1300 50  0001 C CNN
 F 3 "~" H 5100 1300 50  0001 C CNN
+F 4 "Digi-Key" H 4900 1300 50  0001 C CNN "Distributor"
+F 5 "36-5015CT-ND" H 4900 1300 50  0001 C CNN "Distributor Part Number"
 	1    4900 1300
 	1    0    0    -1  
 $EndComp
@@ -1049,6 +1102,8 @@ F 1 "270 uF" H 2642 1705 50  0000 L CNN
 F 2 "Capacitor_SMD:CP_Elec_6.3x5.9" H 2550 1750 50  0001 C CNN
 F 3 "~" H 2550 1750 50  0001 C CNN
 F 4 "875105245014" H 2550 1750 50  0001 C CNN "MPN"
+F 5 "Digi-Key" H 2550 1750 50  0001 C CNN "Distributor"
+F 6 "732-6414-1-ND" H 2550 1750 50  0001 C CNN "Distributor Part Number"
 	1    2550 1750
 	1    0    0    -1  
 $EndComp

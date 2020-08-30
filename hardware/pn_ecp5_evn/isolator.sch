@@ -21,6 +21,8 @@ F 0 "U903" H 5500 2617 50  0000 C CNN
 F 1 "Si8640BB-B-IU" H 5500 2526 50  0000 C CNN
 F 2 "Package_SO:QSOP-16_3.9x4.9mm_P0.635mm" H 5500 1400 50  0001 C CIN
 F 3 "https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf" H 5500 2350 50  0001 C CNN
+F 4 "Mouser" H 5500 1950 50  0001 C CNN "Distributor"
+F 5 "634-SI8640BB-B-IU " H 5500 1950 50  0001 C CNN "Distributor Part Number"
 	1    5500 1950
 	-1   0    0    -1  
 $EndComp
@@ -115,6 +117,8 @@ F 0 "U904" H 5500 3967 50  0000 C CNN
 F 1 "Si8640BB-B-IU" H 5500 3876 50  0000 C CNN
 F 2 "Package_SO:QSOP-16_3.9x4.9mm_P0.635mm" H 5500 2750 50  0001 C CIN
 F 3 "https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf" H 5500 3700 50  0001 C CNN
+F 4 "Mouser" H 5500 3300 50  0001 C CNN "Distributor"
+F 5 "634-SI8640BB-B-IU " H 5500 3300 50  0001 C CNN "Distributor Part Number"
 	1    5500 3300
 	-1   0    0    -1  
 $EndComp
@@ -276,6 +280,8 @@ F 0 "U902" H 1650 5050 50  0000 C CNN
 F 1 "ADS7868" H 1750 4950 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 2000 4550 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/ads7866.pdf" H 2050 4850 50  0001 C CNN
+F 4 "Digi-Key" H 2000 4600 50  0001 C CNN "Distributor"
+F 5 " 296-41406-1-ND" H 2000 4600 50  0001 C CNN "Distributor Part Number"
 	1    2000 4600
 	1    0    0    -1  
 $EndComp
@@ -311,6 +317,7 @@ F 0 "C902" H 2592 3996 50  0000 L CNN
 F 1 "1 uF" H 2592 3905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 2500 3950 50  0001 C CNN
 F 3 "~" H 2500 3950 50  0001 C CNN
+F 4 "N/A" H 2500 3950 50  0001 C CNN "Distributor Part Number"
 	1    2500 3950
 	-1   0    0    -1  
 $EndComp
@@ -352,6 +359,8 @@ F 0 "U901" H 1650 3250 50  0000 C CNN
 F 1 "ADS7868" H 1750 3150 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 2000 2750 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/ads7866.pdf" H 2050 3050 50  0001 C CNN
+F 4 "Digi-Key" H 2000 2800 50  0001 C CNN "Distributor"
+F 5 " 296-41406-1-ND" H 2000 2800 50  0001 C CNN "Distributor Part Number"
 	1    2000 2800
 	1    0    0    -1  
 $EndComp
@@ -387,6 +396,7 @@ F 0 "C901" H 2592 2196 50  0000 L CNN
 F 1 "1 uF" H 2592 2105 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 2500 2150 50  0001 C CNN
 F 3 "~" H 2500 2150 50  0001 C CNN
+F 4 "N/A" H 2500 2150 50  0001 C CNN "Distributor Part Number"
 	1    2500 2150
 	-1   0    0    -1  
 $EndComp
@@ -491,6 +501,8 @@ F 0 "U905" H 5500 5567 50  0000 C CNN
 F 1 "Si8642BB-B-IU" H 5500 5476 50  0000 C CNN
 F 2 "Package_SO:QSOP-16_3.9x4.9mm_P0.635mm" H 5500 4350 50  0001 C CIN
 F 3 "https://www.silabs.com/documents/public/data-sheets/si864x-datasheet.pdf" H 5500 5300 50  0001 C CNN
+F 4 "Mouser" H 5500 4900 50  0001 C CNN "Distributor"
+F 5 "634-SI8642BB-B-IU" H 5500 4900 50  0001 C CNN "Distributor Part Number"
 	1    5500 4900
 	1    0    0    -1  
 $EndComp
@@ -554,6 +566,7 @@ F 0 "C905" V 5271 5850 50  0000 C CNN
 F 1 "DNI" V 5362 5850 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 5500 5850 50  0001 C CNN
 F 3 "~" H 5500 5850 50  0001 C CNN
+F 4 "N/A" H 5500 5850 50  0001 C CNN "Distributor Part Number"
 	1    5500 5850
 	0    1    1    0   
 $EndComp
@@ -582,6 +595,7 @@ F 0 "C906" H 7592 1646 50  0000 L CNN
 F 1 "100 nF" H 7592 1555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7500 1600 50  0001 C CNN
 F 3 "~" H 7500 1600 50  0001 C CNN
+F 4 "N/A" H 7500 1600 50  0001 C CNN "Distributor Part Number"
 	1    7500 1600
 	-1   0    0    -1  
 $EndComp
@@ -623,6 +637,7 @@ F 0 "C907" H 8142 1646 50  0000 L CNN
 F 1 "100 nF" H 8142 1555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 8050 1600 50  0001 C CNN
 F 3 "~" H 8050 1600 50  0001 C CNN
+F 4 "N/A" H 8050 1600 50  0001 C CNN "Distributor Part Number"
 	1    8050 1600
 	-1   0    0    -1  
 $EndComp
@@ -666,6 +681,7 @@ F 0 "C904" H 3842 5946 50  0000 L CNN
 F 1 "100 nF" H 3842 5855 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3750 5900 50  0001 C CNN
 F 3 "~" H 3750 5900 50  0001 C CNN
+F 4 "N/A" H 3750 5900 50  0001 C CNN "Distributor Part Number"
 	1    3750 5900
 	-1   0    0    -1  
 $EndComp
@@ -707,6 +723,7 @@ F 0 "C903" H 3242 5946 50  0000 L CNN
 F 1 "100 nF" H 3242 5855 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3150 5900 50  0001 C CNN
 F 3 "~" H 3150 5900 50  0001 C CNN
+F 4 "N/A" H 3150 5900 50  0001 C CNN "Distributor Part Number"
 	1    3150 5900
 	-1   0    0    -1  
 $EndComp
@@ -748,6 +765,7 @@ F 0 "C908" H 2542 5896 50  0000 L CNN
 F 1 "100 nF" H 2542 5805 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 2450 5850 50  0001 C CNN
 F 3 "~" H 2450 5850 50  0001 C CNN
+F 4 "N/A" H 2450 5850 50  0001 C CNN "Distributor Part Number"
 	1    2450 5850
 	-1   0    0    -1  
 $EndComp
@@ -787,6 +805,7 @@ F 0 "C909" H 8642 1646 50  0000 L CNN
 F 1 "100 nF" H 8642 1555 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 8550 1600 50  0001 C CNN
 F 3 "~" H 8550 1600 50  0001 C CNN
+F 4 "N/A" H 8550 1600 50  0001 C CNN "Distributor Part Number"
 	1    8550 1600
 	-1   0    0    -1  
 $EndComp

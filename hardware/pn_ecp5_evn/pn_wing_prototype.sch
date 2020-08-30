@@ -60,6 +60,8 @@ F 0 "J102" H 1078 1988 50  0000 C CNN
 F 1 "Conn_Coaxial" H 1078 1897 50  0000 C CNN
 F 2 "vna:SMA_Molex_73251-1153_OSHFR408" H 1150 1750 50  0001 C CNN
 F 3 " ~" H 1150 1750 50  0001 C CNN
+F 4 "WM5534-ND" H 1150 1750 50  0001 C CNN "Distributor Part Number"
+F 5 "Digi-Key" H 1150 1750 50  0001 C CNN "Distributor"
 	1    1150 1750
 	-1   0    0    -1  
 $EndComp
@@ -218,6 +220,8 @@ F 0 "J104" H 9250 1625 50  0000 L CNN
 F 1 "Conn_Coaxial" H 9250 1534 50  0000 L CNN
 F 2 "vna:SMA_Molex_73251-1153_OSHFR408" H 9150 1650 50  0001 C CNN
 F 3 " ~" H 9150 1650 50  0001 C CNN
+F 4 "WM5534-ND" H 9150 1650 50  0001 C CNN "Distributor Part Number"
+F 5 "Digi-Key" H 9150 1650 50  0001 C CNN "Distributor"
 	1    9150 1650
 	1    0    0    -1  
 $EndComp
@@ -244,6 +248,8 @@ F 0 "J105" H 9250 2125 50  0000 L CNN
 F 1 "Conn_Coaxial" H 9250 2034 50  0000 L CNN
 F 2 "vna:SMA_Molex_73251-1153_OSHFR408" H 9150 2150 50  0001 C CNN
 F 3 " ~" H 9150 2150 50  0001 C CNN
+F 4 "WM5534-ND" H 9150 2150 50  0001 C CNN "Distributor Part Number"
+F 5 "Digi-Key" H 9150 2150 50  0001 C CNN "Distributor"
 	1    9150 2150
 	1    0    0    -1  
 $EndComp
@@ -270,6 +276,8 @@ F 0 "J106" H 9250 2675 50  0000 L CNN
 F 1 "Conn_Coaxial" H 9250 2584 50  0000 L CNN
 F 2 "vna:SMA_Molex_73251-1153_OSHFR408" H 9150 2700 50  0001 C CNN
 F 3 " ~" H 9150 2700 50  0001 C CNN
+F 4 "WM5534-ND" H 9150 2700 50  0001 C CNN "Distributor Part Number"
+F 5 "Digi-Key" H 9150 2700 50  0001 C CNN "Distributor"
 	1    9150 2700
 	1    0    0    -1  
 $EndComp
@@ -296,6 +304,8 @@ F 0 "J103" H 9100 5967 50  0000 C CNN
 F 1 "Conn_02x20_Odd_Even" H 9100 5876 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_2x20_P2.54mm_Vertical" H 9050 4850 50  0001 C CNN
 F 3 "~" H 9050 4850 50  0001 C CNN
+F 4 "Digi-Key" H 9050 4850 50  0001 C CNN "Distributor"
+F 5 "S7053-ND " H 9050 4850 50  0001 C CNN "Distributor Part Number"
 	1    9050 4850
 	1    0    0    -1  
 $EndComp
@@ -412,6 +422,7 @@ F 0 "J107" H 10150 4950 50  0000 L CNN
 F 1 "Conn_01x10" H 10050 4850 50  0000 L CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_1x10_P2.54mm_Vertical" H 10200 4350 50  0001 C CNN
 F 3 "~" H 10200 4350 50  0001 C CNN
+F 4 "N/A" H 10200 4350 50  0001 C CNN "Distributor Part Number"
 	1    10200 4350
 	1    0    0    -1  
 $EndComp
@@ -484,6 +495,8 @@ F 0 "J101" H 1080 5342 50  0000 L CNN
 F 1 "Screw_Terminal_01x02" H 1080 5251 50  0000 L CNN
 F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MPT-0,5-2-2.54_1x02_P2.54mm_Horizontal" H 1000 5350 50  0001 C CNN
 F 3 "~" H 1000 5350 50  0001 C CNN
+F 4 "Digi-Key" H 1000 5350 50  0001 C CNN "Distributor"
+F 5 "277-1273-ND" H 1000 5350 50  0001 C CNN "Distributor Part Number"
 	1    1000 5350
 	-1   0    0    -1  
 $EndComp
@@ -526,6 +539,7 @@ F 0 "H101" H 1100 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1100 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 1000 7450 50  0001 C CNN
 F 3 "~" H 1000 7450 50  0001 C CNN
+F 4 "N/A" H 1000 7450 50  0001 C CNN "Distributor Part Number"
 	1    1000 7450
 	1    0    0    -1  
 $EndComp
@@ -550,6 +564,7 @@ F 0 "H102" H 1400 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1400 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 1300 7450 50  0001 C CNN
 F 3 "~" H 1300 7450 50  0001 C CNN
+F 4 "N/A" H 1300 7450 50  0001 C CNN "Distributor Part Number"
 	1    1300 7450
 	1    0    0    -1  
 $EndComp
@@ -574,6 +589,7 @@ F 0 "H103" H 1700 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 1700 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 1600 7450 50  0001 C CNN
 F 3 "~" H 1600 7450 50  0001 C CNN
+F 4 "N/A" H 1600 7450 50  0001 C CNN "Distributor Part Number"
 	1    1600 7450
 	1    0    0    -1  
 $EndComp
@@ -598,6 +614,7 @@ F 0 "H104" H 2000 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 2000 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 1900 7450 50  0001 C CNN
 F 3 "~" H 1900 7450 50  0001 C CNN
+F 4 "N/A" H 1900 7450 50  0001 C CNN "Distributor Part Number"
 	1    1900 7450
 	1    0    0    -1  
 $EndComp
@@ -622,6 +639,7 @@ F 0 "H105" H 2300 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 2300 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 2200 7450 50  0001 C CNN
 F 3 "~" H 2200 7450 50  0001 C CNN
+F 4 "N/A" H 2200 7450 50  0001 C CNN "Distributor Part Number"
 	1    2200 7450
 	1    0    0    -1  
 $EndComp
@@ -646,6 +664,7 @@ F 0 "H106" H 2600 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 2600 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 2500 7450 50  0001 C CNN
 F 3 "~" H 2500 7450 50  0001 C CNN
+F 4 "N/A" H 2500 7450 50  0001 C CNN "Distributor Part Number"
 	1    2500 7450
 	1    0    0    -1  
 $EndComp
@@ -670,6 +689,7 @@ F 0 "H107" H 2900 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 2900 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 2800 7450 50  0001 C CNN
 F 3 "~" H 2800 7450 50  0001 C CNN
+F 4 "N/A" H 2800 7450 50  0001 C CNN "Distributor Part Number"
 	1    2800 7450
 	1    0    0    -1  
 $EndComp
@@ -694,6 +714,7 @@ F 0 "H108" H 3200 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 3200 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 3100 7450 50  0001 C CNN
 F 3 "~" H 3100 7450 50  0001 C CNN
+F 4 "N/A" H 3100 7450 50  0001 C CNN "Distributor Part Number"
 	1    3100 7450
 	1    0    0    -1  
 $EndComp
@@ -718,6 +739,7 @@ F 0 "H109" H 3500 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 3500 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 3400 7450 50  0001 C CNN
 F 3 "~" H 3400 7450 50  0001 C CNN
+F 4 "N/A" H 3400 7450 50  0001 C CNN "Distributor Part Number"
 	1    3400 7450
 	1    0    0    -1  
 $EndComp
@@ -742,6 +764,7 @@ F 0 "H110" H 3800 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 3800 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 3700 7450 50  0001 C CNN
 F 3 "~" H 3700 7450 50  0001 C CNN
+F 4 "N/A" H 3700 7450 50  0001 C CNN "Distributor Part Number"
 	1    3700 7450
 	1    0    0    -1  
 $EndComp
@@ -766,6 +789,7 @@ F 0 "H111" H 4100 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 4100 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 4000 7450 50  0001 C CNN
 F 3 "~" H 4000 7450 50  0001 C CNN
+F 4 "N/A" H 4000 7450 50  0001 C CNN "Distributor Part Number"
 	1    4000 7450
 	1    0    0    -1  
 $EndComp
@@ -790,6 +814,7 @@ F 0 "H112" H 4400 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 4400 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 4300 7450 50  0001 C CNN
 F 3 "~" H 4300 7450 50  0001 C CNN
+F 4 "N/A" H 4300 7450 50  0001 C CNN "Distributor Part Number"
 	1    4300 7450
 	1    0    0    -1  
 $EndComp
@@ -814,6 +839,7 @@ F 0 "H113" H 4750 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 4750 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 4650 7450 50  0001 C CNN
 F 3 "~" H 4650 7450 50  0001 C CNN
+F 4 "N/A" H 4650 7450 50  0001 C CNN "Distributor Part Number"
 	1    4650 7450
 	1    0    0    -1  
 $EndComp
@@ -838,6 +864,7 @@ F 0 "H114" H 5050 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 5050 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 4950 7450 50  0001 C CNN
 F 3 "~" H 4950 7450 50  0001 C CNN
+F 4 "N/A" H 4950 7450 50  0001 C CNN "Distributor Part Number"
 	1    4950 7450
 	1    0    0    -1  
 $EndComp
@@ -862,6 +889,7 @@ F 0 "H115" H 5500 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 5500 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 5400 7450 50  0001 C CNN
 F 3 "~" H 5400 7450 50  0001 C CNN
+F 4 "N/A" H 5400 7450 50  0001 C CNN "Distributor Part Number"
 	1    5400 7450
 	1    0    0    -1  
 $EndComp
@@ -886,6 +914,7 @@ F 0 "H116" H 5900 7453 50  0000 L CNN
 F 1 "MountingHole_Pad" H 5900 7408 50  0001 L CNN
 F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 5800 7450 50  0001 C CNN
 F 3 "~" H 5800 7450 50  0001 C CNN
+F 4 "N/A" H 5800 7450 50  0001 C CNN "Distributor Part Number"
 	1    5800 7450
 	1    0    0    -1  
 $EndComp

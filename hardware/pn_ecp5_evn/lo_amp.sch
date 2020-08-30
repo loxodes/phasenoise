@@ -26,6 +26,8 @@ F 0 "R401" H 3659 4396 50  0000 L CNN
 F 1 "50" H 3659 4305 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 3600 4350 50  0001 C CNN
 F 3 "~" H 3600 4350 50  0001 C CNN
+F 4 "Digi-Key" H 3600 4350 50  0001 C CNN "Distributor"
+F 5 "RR05R49.9DCT-ND" H 3600 4350 50  0001 C CNN "Distributor Part Number"
 	1    3600 4350
 	1    0    0    -1  
 $EndComp
@@ -42,6 +44,8 @@ F 0 "U402" H 5750 4500 50  0000 L CNN
 F 1 "TRF37A73" H 5550 3850 50  0000 L CNN
 F 2 "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm" H 6150 4200 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/trf37a73.pdf" H 5950 4200 50  0001 C CNN
+F 4 "Digi-Key" H 5950 4200 50  0001 C CNN "Distributor"
+F 5 "296-48786-1-ND " H 5950 4200 50  0001 C CNN "Distributor Part Number"
 	1    5950 4200
 	1    0    0    -1  
 $EndComp
@@ -58,6 +62,7 @@ F 0 "C402" V 3950 4100 50  0000 C CNN
 F 1 "10 nF" V 3950 4350 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4000 4200 50  0001 C CNN
 F 3 "~" H 4000 4200 50  0001 C CNN
+F 4 "N/A" H 4000 4200 50  0001 C CNN "Distributor Part Number"
 	1    4000 4200
 	0    1    1    0   
 $EndComp
@@ -74,6 +79,7 @@ F 0 "C403" V 3950 4800 50  0000 C CNN
 F 1 "10 nF" V 3950 5050 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 4000 4900 50  0001 C CNN
 F 3 "~" H 4000 4900 50  0001 C CNN
+F 4 "N/A" H 4000 4900 50  0001 C CNN "Distributor Part Number"
 	1    4000 4900
 	0    1    1    0   
 $EndComp
@@ -90,6 +96,8 @@ F 0 "R402" H 3659 4796 50  0000 L CNN
 F 1 "50" H 3659 4705 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 3600 4750 50  0001 C CNN
 F 3 "~" H 3600 4750 50  0001 C CNN
+F 4 "Digi-Key" H 3600 4750 50  0001 C CNN "Distributor"
+F 5 "RR05R49.9DCT-ND" H 3600 4750 50  0001 C CNN "Distributor Part Number"
 	1    3600 4750
 	1    0    0    -1  
 $EndComp
@@ -114,6 +122,7 @@ F 0 "C401" V 3300 4500 50  0000 C CNN
 F 1 "10 nF" V 3500 4600 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 3400 4550 50  0001 C CNN
 F 3 "~" H 3400 4550 50  0001 C CNN
+F 4 "N/A" H 3400 4550 50  0001 C CNN "Distributor Part Number"
 	1    3400 4550
 	0    1    1    0   
 $EndComp
@@ -137,6 +146,8 @@ F 0 "L401" V 3950 4550 50  0000 C CNN
 F 1 "18 nH" V 3800 4500 50  0000 C CNN
 F 2 "Inductor_SMD:L_0402_1005Metric" H 3850 4550 50  0001 C CNN
 F 3 "~" H 3850 4550 50  0001 C CNN
+F 4 "Digi-Key" H 3850 4550 50  0001 C CNN "Distributor"
+F 5 "490-1172-1-ND " H 3850 4550 50  0001 C CNN "Distributor Part Number"
 	1    3850 4550
 	0    -1   -1   0   
 $EndComp
@@ -171,6 +182,8 @@ F 0 "R404" H 4459 4946 50  0000 L CNN
 F 1 "50" H 4459 4855 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4400 4900 50  0001 C CNN
 F 3 "~" H 4400 4900 50  0001 C CNN
+F 4 "Digi-Key" H 4400 4900 50  0001 C CNN "Distributor"
+F 5 "RR05R49.9DCT-ND" H 4400 4900 50  0001 C CNN "Distributor Part Number"
 	1    4400 4900
 	0    -1   -1   0   
 $EndComp
@@ -223,6 +236,8 @@ F 0 "U401" H 4950 4667 50  0000 C CNN
 F 1 "PAT1220-C-3DB" H 4950 4576 50  0000 C CNN
 F 2 "RF_Converter:RF_Attenuator_Susumu_PAT1220" H 4950 4300 50  0001 C CNN
 F 3 "https://www.susumu.co.jp/common/pdf/n_catalog_partition16_en.pdf" H 4700 4550 50  0001 C CNN
+F 4 "Digi-Key" H 4950 4300 50  0001 C CNN "Distributor"
+F 5 "PAT123CT-ND " H 4950 4300 50  0001 C CNN "Distributor Part Number"
 	1    4950 4300
 	1    0    0    -1  
 $EndComp
@@ -257,6 +272,7 @@ F 0 "C404" V 5321 4200 50  0000 C CNN
 F 1 "10 nF" V 5412 4200 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 5550 4200 50  0001 C CNN
 F 3 "~" H 5550 4200 50  0001 C CNN
+F 4 "N/A" H 5550 4200 50  0001 C CNN "Distributor Part Number"
 	1    5550 4200
 	0    1    1    0   
 $EndComp
@@ -273,6 +289,7 @@ F 0 "C407" V 6571 4200 50  0000 C CNN
 F 1 "10 nF" V 6662 4200 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6800 4200 50  0001 C CNN
 F 3 "~" H 6800 4200 50  0001 C CNN
+F 4 "N/A" H 6800 4200 50  0001 C CNN "Distributor Part Number"
 	1    6800 4200
 	0    1    1    0   
 $EndComp
@@ -295,6 +312,8 @@ F 0 "U403" H 7400 4667 50  0000 C CNN
 F 1 "PAT1220-C-3DB" H 7400 4576 50  0000 C CNN
 F 2 "RF_Converter:RF_Attenuator_Susumu_PAT1220" H 7400 4300 50  0001 C CNN
 F 3 "https://www.susumu.co.jp/common/pdf/n_catalog_partition16_en.pdf" H 7150 4550 50  0001 C CNN
+F 4 "Digi-Key" H 7400 4300 50  0001 C CNN "Distributor"
+F 5 "PAT123CT-ND " H 7400 4300 50  0001 C CNN "Distributor Part Number"
 	1    7400 4300
 	1    0    0    -1  
 $EndComp
@@ -364,6 +383,8 @@ F 0 "L403" H 6498 3646 50  0000 L CNN
 F 1 "BLM15GG471" H 6498 3555 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric" H 6450 3600 50  0001 C CNN
 F 3 "~" H 6450 3600 50  0001 C CNN
+F 4 "Digi-Key" H 6450 3600 50  0001 C CNN "Distributor"
+F 5 "490-5198-1-ND" H 6450 3600 50  0001 C CNN "Distributor Part Number"
 	1    6450 3600
 	1    0    0    -1  
 $EndComp
@@ -377,6 +398,7 @@ F 0 "C405" H 5742 3146 50  0000 L CNN
 F 1 "100 nF" H 5742 3055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 5650 3100 50  0001 C CNN
 F 3 "~" H 5650 3100 50  0001 C CNN
+F 4 "N/A" H 5650 3100 50  0001 C CNN "Distributor Part Number"
 	1    5650 3100
 	1    0    0    -1  
 $EndComp
@@ -390,6 +412,7 @@ F 0 "C409" H 7592 3146 50  0000 L CNN
 F 1 "10 uF" H 7592 3055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 7500 3100 50  0001 C CNN
 F 3 "~" H 7500 3100 50  0001 C CNN
+F 4 "N/A" H 7500 3100 50  0001 C CNN "Distributor Part Number"
 	1    7500 3100
 	1    0    0    -1  
 $EndComp
@@ -403,6 +426,7 @@ F 0 "C408" H 7192 3146 50  0000 L CNN
 F 1 "10 nF" H 7192 3055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7100 3100 50  0001 C CNN
 F 3 "~" H 7100 3100 50  0001 C CNN
+F 4 "N/A" H 7100 3100 50  0001 C CNN "Distributor Part Number"
 	1    7100 3100
 	1    0    0    -1  
 $EndComp
@@ -436,6 +460,7 @@ F 0 "C406" H 6742 3146 50  0000 L CNN
 F 1 "390 pF" H 6742 3055 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6650 3100 50  0001 C CNN
 F 3 "~" H 6650 3100 50  0001 C CNN
+F 4 "399-1069-1-ND" H 6650 3100 50  0001 C CNN "Distributor Part Number"
 	1    6650 3100
 	1    0    0    -1  
 $EndComp
@@ -505,6 +530,7 @@ F 0 "J401" H 4900 5175 50  0000 L CNN
 F 1 "Conn_Coaxial" H 4900 5084 50  0000 L CNN
 F 2 "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical" H 4800 5200 50  0001 C CNN
 F 3 " ~" H 4800 5200 50  0001 C CNN
+F 4 "N/A" H 4800 5200 50  0001 C CNN "Distributor Part Number"
 	1    4800 5200
 	1    0    0    -1  
 $EndComp
@@ -523,6 +549,7 @@ F 0 "R405" H 4459 5246 50  0000 L CNN
 F 1 "DNI" H 4459 5155 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4400 5200 50  0001 C CNN
 F 3 "~" H 4400 5200 50  0001 C CNN
+F 4 "N/A" H 4400 5200 50  0001 C CNN "Distributor Part Number"
 	1    4400 5200
 	0    -1   -1   0   
 $EndComp
@@ -610,6 +637,8 @@ F 0 "L402" H 6498 2446 50  0000 L CNN
 F 1 "BLM15GG471" H 6498 2355 50  0000 L CNN
 F 2 "Inductor_SMD:L_0402_1005Metric" H 6450 2400 50  0001 C CNN
 F 3 "~" H 6450 2400 50  0001 C CNN
+F 4 "Digi-Key" H 6450 2400 50  0001 C CNN "Distributor"
+F 5 "490-5198-1-ND" H 6450 2400 50  0001 C CNN "Distributor Part Number"
 	1    6450 2400
 	1    0    0    -1  
 $EndComp
@@ -628,6 +657,7 @@ F 0 "R403" H 4459 3946 50  0000 L CNN
 F 1 "DNI" H 4459 3855 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4400 3900 50  0001 C CNN
 F 3 "~" H 4400 3900 50  0001 C CNN
+F 4 "N/A" H 4400 3900 50  0001 C CNN "Distributor Part Number"
 	1    4400 3900
 	-1   0    0    1   
 $EndComp
@@ -667,6 +697,7 @@ F 0 "R406" H 6009 3746 50  0000 L CNN
 F 1 "DNI" H 6009 3655 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 5950 3700 50  0001 C CNN
 F 3 "~" H 5950 3700 50  0001 C CNN
+F 4 "N/A" H 5950 3700 50  0001 C CNN "Distributor Part Number"
 	1    5950 3700
 	-1   0    0    1   
 $EndComp
