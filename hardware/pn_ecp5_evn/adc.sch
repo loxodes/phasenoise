@@ -20,7 +20,7 @@ L Reference_Voltage:LT6657BHMS8-2.5 U802
 U 1 1 5FA4D542
 P 4700 6700
 F 0 "U802" H 4800 7100 50  0000 L CNN
-F 1 "LT6657BHMS8-2.5" H 4800 7000 50  0000 L CNN
+F 1 "DNI" H 4800 7000 50  0000 L CNN
 F 2 "Package_SO:MSOP-8_3x3mm_P0.65mm" H 4800 7050 50  0001 L CIN
 F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/6657fd.pdf" H 4750 6350 50  0001 C CIN
 F 4 "Digi-Key" H 4700 6700 50  0001 C CNN "Distributor"
