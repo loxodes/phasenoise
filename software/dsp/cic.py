@@ -121,18 +121,81 @@ class _Decimator(Module):
                 self.o_valid.eq(False))
         ]
 
-def cic_test(dut):
-    # see FIR test
-    yield dut.i_sample.eq(1)
-    for i in range(100):
+def cic_test_sine(dut):
+    import numpy as np
+    import matplotlib.pyplot as plt
+
+
+    def twos_comp(val, bits):
+        if (val & (1 << (bits - 1))) != 0:
+            val = val - (1 << bits)
+        return val
+
+    ts = 1./25e6
+    fc = 10e6
+    t = np.arange(0,.0001,ts)
+    print(ts)
+    s = np.sin(2 * np.pi * fc * t) * (2 ** 10)
+
+    s_output = []
+
+    for s_i in s:
+        yield dut.i_sample.eq(int(s_i))
+        if (yield dut.o_valid):
+            result = twos_comp((yield dut.o_result), bits = 21)
+            s_output.append(result/512)
         yield
-    yield dut.i_sample.eq(-2)
-    for i in range(100):
+
+    s_output = np.array(s_output)
+    plt.plot(t,s)
+    t_output = t[::8]
+    plt.plot(t_output, s_output)
+    plt.show()
+
+def cic_test_noise(dut):
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from scipy.signal import lfilter
+
+    def twos_comp(val, bits):
+        if (val & (1 << (bits - 1))) != 0:
+            val = val - (1 << bits)
+        return val
+
+    fs = 25e6
+    ts = 1/fs
+    d = 8
+
+    fc = 10e6
+    t = np.arange(0,.001,ts)
+    print(ts)
+    s = np.int16(np.random.normal(0,1024,len(t)))
+
+    s_output = []
+
+    for s_i in s:
+        yield dut.i_sample.eq(int(s_i))
+        if (yield dut.o_valid):
+            result = twos_comp((yield dut.o_result), bits = 21)
+            s_output.append(result/512)
         yield
+
+    s_output = np.array(s_output)
+    t_output = t[::d]
+    s_output_filtered = lfilter([1,-10,1], 1.0, s_output)/8
+    plt.subplot(2,1,1)
+    plt.plot(t,s)
+    plt.plot(t_output, s_output)
+    plt.plot(t_output, s_output_filtered)
+    plt.subplot(2,1,2)
+    plt.magnitude_spectrum(s, fs, scale='dB', alpha=.5)
+    plt.magnitude_spectrum(s_output, fs/d, scale='dB', alpha=.5)
+    plt.magnitude_spectrum(s_output_filtered, fs/d, scale='dB', alpha=.5)
+    plt.show()
 
 if __name__ == '__main__':
     dut = CIC()
-    run_simulation(dut, cic_test(dut), vcd_name="cic_test.vcd")
+    run_simulation(dut, cic_test_noise(dut), vcd_name="cic_test.vcd")
 
 
 
