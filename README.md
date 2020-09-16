@@ -6,6 +6,7 @@
 
 
 Software development and hardware testing is in progress.
+The only current documentation is the ![schematic](./phase_noise_downconver_schematic_2020_08.pdf).
 
 ## Usage
 This project is under development, y'all probably don't want to try reproducing it yet.
