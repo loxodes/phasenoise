@@ -1,14 +1,20 @@
 from migen import *
 from cossin import CosSinGen
+import numpy as np
+
 # uses cossin from M-Labs, https://github.com/m-labs/cossin
 # https://nbviewer.jupyter.org/github/m-labs/cossin/blob/master/cossin.ipynb
 
 class NCO(Module):
-    def __init__(self, bits = 16):
-        self.i_phase_inc = Signal(18)
+    def __init__(self, output_bits = 16, phaseinc_bits = 18):
+        self.i_phase_inc = Signal(phaseinc_bits)
 
-        self.o_nco_i = Signal(bits)
-        self.o_nco_q = Signal(bits)
+        self.o_nco_i = Signal(output_bits)
+        self.o_nco_q = Signal(output_bits)
+
+        self.output_bits = output_bits
+        self.phaseinc_bits = phaseinc_bits
+
     
         # z is total phase depth at the input, resolution of 1/(1<<z) radians
         # x is width, excluding sign bit
@@ -21,6 +27,11 @@ class NCO(Module):
         
         self.sync += self.o_nco_i.eq(csgen.x)
         self.sync += self.o_nco_q.eq(csgen.y)
+    
+    def calc_phase_inc(self, f_s, f_nco):
+        # calculate the setting for the phase increment for a frequency
+        # not synthesizable
+        return int((f_nco / f_s) * ((2 ** self.phaseinc_bits) - 1))
 
 
 def nco_test(dut):

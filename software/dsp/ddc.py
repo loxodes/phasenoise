@@ -1,45 +1,86 @@
-from migen import *
+from migen import *  
+from nco import NCO
+from mixer import Mixer
+from cic import CIC, CompensationFilter
+
+
+import numpy as np
+import matplotlib.pyplot as plt
 
 class DDC(Module):
-    def __init__(self, input_bits = 16):
+    def __init__(self, input_bits = 12, output_bits = 16, phaseinc_bits = 18, nco_bits = 18, if_bits = 16):
         self.i_sample = Signal(input_bits)
 
-        output_bits = 
         self.o_i = Signal(output_bits)
         self.o_q = Signal(output_bits)
+        self.o_valid = Signal()
 
-        self.i_nco_freq = Signal(18)
+        self.i_nco_freq = Signal(phaseinc_bits)
 
-        nco = NCO()
-        self.submodules += nco
+        self.input_bits = input_bits
+        self.output_bits = output_bits
+        self.phase_bits = phaseinc_bits
 
-        mixer = Mixer()
-        self.submodules += mixer
+        self.nco = nco = NCO(output_bits = nco_bits, phaseinc_bits = phaseinc_bits)
 
-        cic = CIC()
-        self.submodules += cic
+        self.mixer = mixer = Mixer(sample_bits = input_bits, nco_bits = nco_bits, output_bits = if_bits)
+        self.cic_i = cic_i = CIC(input_bits = if_bits)
+        self.cic_q = cic_q = CIC(input_bits = if_bits)
 
-        comp_fir = CompensationFilter()
-        self.submodules += comp_fir
+        self.comb += [
+            cic_i.i_sample.eq(nco.o_nco_i),
+            cic_q.i_sample.eq(nco.o_nco_q),
+            self.o_valid.eq(cic_i.o_valid),
+            self.o_i.eq(cic_i.o_result[(cic_i.filter_bits - output_bits):]),
+            self.o_q.eq(cic_q.o_result[(cic_q.filter_bits - output_bits):])]
+
+        self.submodules += [nco, mixer, cic_i, cic_q,]
+
+
+        #comp_fir = CompensationFilter()
+        #self.submodules += comp_fir
 
     
-        self.csgen = csgen = CosSinGen()#z=18, x=15, zl=9, xd=3)
-        self.submodules += csgen
-        self.sync += csgen.z.eq(csgen.z+self.i_phase_inc) 
-        
-        self.sync += self.o_nco_i.eq(csgen.x)
-        self.sync += self.o_nco_q.eq(csgen.y)
-
-
 def ddc_test(dut):
-    yield dut.i_phase_inc.eq(100)
-    for i in range(10000):
+    f_s = 25e6
+    f_in = 5e6
+    f_nco = 4.9e6
+
+    duration = .0001
+    t_s = 1/f_s 
+
+    t = np.arange(0,duration,t_s)
+    s_in = np.sin(2 * np.pi * f_in * t) * (2 ** 10)
+
+    phase_inc = dut.nco.calc_phase_inc(f_s, f_nco)
+    yield dut.nco.i_phase_inc.eq(phase_inc)
+
+    i_results = []
+    q_results = []
+
+    for s_i in s_in:
+        yield dut.i_sample.eq(int(s_i))
+        if (yield dut.o_valid):
+            i_result = twos_comp((yield dut.o_i), bits = dut.output_bits)
+            q_result = twos_comp((yield dut.o_q), bits = dut.output_bits)
+            i_results.append(i_result/512)
+            q_results.append(q_result/512)
         yield
-    yield dut.i_phase_inc.eq(1000)
-    for i in range(10000):
-        yield        
+
+    i_results = np.array(i_results)
+    q_results = np.array(q_results)
+
+    plt.plot(i_results)
+    plt.plot(q_results)
+    plt.show()
+    
+def twos_comp(val, bits):
+    if (val & (1 << (bits - 1))) != 0:
+        val = val - (1 << bits)
+    return val
+
 if __name__ == '__main__':
-    dut = NCO()
+    dut = DDC()
     run_simulation(dut, ddc_test(dut), vcd_name="ddc_test.vcd")
 
 

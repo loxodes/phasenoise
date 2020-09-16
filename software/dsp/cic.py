@@ -5,7 +5,7 @@ import pdb
 # http://www.ee.nmt.edu/~erives/531_14/CIC_filters.pdf
 class CIC(Module):
     def __init__(self, input_bits = 12, cic_order = 3, decimation = 8):
-        filter_bits = input_bits + cic_order * log2_int(decimation, need_pow2 = False)
+        self.filter_bits = filter_bits = input_bits + cic_order * log2_int(decimation, need_pow2 = False)
         print('filter bits: {}'.format(filter_bits))
         self.i_sample = Signal(input_bits)
         self.o_result = Signal(filter_bits)
