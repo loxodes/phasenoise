@@ -63,7 +63,7 @@ F 4 "N/A" H 1850 3200 50  0001 C CNN "Distributor Part Number"
 	0    1    1    0   
 $EndComp
 Text Notes 600  4450 0    50   ~ 10
-a phase detect calibration path\n(or, do externally, connect ref to synth output)
+TODO: add a phase detect calibration path\n(or, do externally, connect ref to synth output)
 $Comp
 L Device:C_Small C703
 U 1 1 5F81177F
@@ -1069,7 +1069,7 @@ Wire Wire Line
 Wire Wire Line
 	3250 3300 3250 3200
 Text Notes 4200 1600 0    50   ~ 0
-Use Sallen-Key low pass filter
+Use TBD Sallen-Key low pass filter
 $Comp
 L Device:C_Small C715
 U 1 1 5F5B8CAD

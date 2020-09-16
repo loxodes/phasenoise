@@ -1116,11 +1116,9 @@ Connection ~ 1950 2300
 Text HLabel 1700 2300 0    50   Input ~ 0
 PHDET_IN
 Text Notes 4100 950  0    50   ~ 0
-TODO:\ncalculate stability?\nverify clamping circuit\ninvestigate noise tradeoffs
+TODO:\ncalculate stability?\nverify clamping circuit\ninvestigate noise tradeoffs\ncheck number of inversions prior to vtune
 Text Notes 2600 4900 0    50   ~ 0
 TODO:\nverify buffer circuit
-Text Notes 3600 650  0    50   ~ 0
-TODO: check number of inversions prior to vtune, maybe have one amp be select 
 Text Notes 3150 1150 0    118  ~ 0
 integrator
 Text Notes 4950 1150 0    118  ~ 0

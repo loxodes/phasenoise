@@ -122,7 +122,7 @@ IF_G1
 Text Label 5100 2650 0    50   ~ 0
 IF_G2
 Text Notes 3850 5950 0    50   ~ 0
-goal, noise floor of:\n-140 dBc/Hz @ 1 kHz\n-150 dBc/Hz @ 10 kHz\n-160 dBc/Hz @ 100 kHz\n-160 dBc/Hz @ 1 MHz\n\nfrom the baseband path
+goal, noise floor of:\n-140 dBc/Hz @ 1 kHz\n-150 dBc/Hz @ 10 kHz\n-160 dBc/Hz @ 100 kHz\n-160 dBc/Hz @ 1 MHz\n\nat the baseband path?
 Wire Wire Line
 	5100 2550 5000 2550
 Wire Wire Line
@@ -937,4 +937,6 @@ Wire Wire Line
 	8850 5650 7650 5650
 Wire Wire Line
 	7650 5750 8850 5750
+Text Notes 3450 1150 0    98   ~ 20
+low phase noise down converter (UNTESTED!)\n10-6000 MHz RF\nDC-1 MHz IF\ninternal LO generation, frequency locked to RF input
 $EndSCHEMATC
