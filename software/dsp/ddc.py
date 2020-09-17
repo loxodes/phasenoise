@@ -28,8 +28,11 @@ class DDC(Module):
         self.cic_q = cic_q = CIC(input_bits = if_bits)
 
         self.comb += [
-            cic_i.i_sample.eq(nco.o_nco_i),
-            cic_q.i_sample.eq(nco.o_nco_q),
+            mixer.i_sample.eq(self.i_sample),
+            mixer.i_nco_i.eq(nco.o_nco_i),
+            mixer.i_nco_q.eq(nco.o_nco_q),
+            cic_i.i_sample.eq(mixer.o_i),
+            cic_q.i_sample.eq(mixer.o_q),
             self.o_valid.eq(cic_i.o_valid),
             self.o_i.eq(cic_i.o_result[(cic_i.filter_bits - output_bits):]),
             self.o_q.eq(cic_q.o_result[(cic_q.filter_bits - output_bits):])]
@@ -44,7 +47,7 @@ class DDC(Module):
 def ddc_test(dut):
     f_s = 25e6
     f_in = 5e6
-    f_nco = 4.9e6
+    f_nco = -4.5e6
 
     duration = .0001
     t_s = 1/f_s 
@@ -69,10 +72,15 @@ def ddc_test(dut):
 
     i_results = np.array(i_results)
     q_results = np.array(q_results)
+    s_results = i_results + 1j * q_results
 
+    plt.subplot(2,1,1)
     plt.plot(i_results)
     plt.plot(q_results)
+    plt.subplot(2,1,2)
+    plt.magnitude_spectrum(s_results, f_s/8, scale='dB', alpha=.5)
     plt.show()
+
     
 def twos_comp(val, bits):
     if (val & (1 << (bits - 1))) != 0:
