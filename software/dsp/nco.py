@@ -21,7 +21,7 @@ class NCO(Module):
         # zl is number of bits in lookup table
         # xd is "derivative coefficient bit width in LUT"???
     
-        self.csgen = csgen = CosSinGen()#z=18, x=15, zl=9, xd=3)
+        self.csgen = csgen = CosSinGen()#z=18, x=19, zl=10, xd=5)#z=18, x=15, zl=9, xd=3)
         self.submodules += csgen
         self.sync += csgen.z.eq(csgen.z+self.i_phase_inc) 
         

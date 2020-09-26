@@ -8,7 +8,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 class DDC(Module):
-    def __init__(self, input_bits = 12, output_bits = 16, phaseinc_bits = 18, nco_bits = 18, if_bits = 16):
+    def __init__(self, input_bits = 12, output_bits = 16, phaseinc_bits = 18, nco_bits = 18, if_bits = 20):
         self.i_sample = Signal(input_bits)
 
         self.o_i = Signal(output_bits)
@@ -20,6 +20,8 @@ class DDC(Module):
         self.input_bits = input_bits
         self.output_bits = output_bits
         self.phase_bits = phaseinc_bits
+        self.if_bits = if_bits
+        self.nco_bits = nco_bits
 
         self.nco = nco = NCO(output_bits = nco_bits, phaseinc_bits = phaseinc_bits)
 
@@ -47,37 +49,54 @@ class DDC(Module):
 def ddc_test(dut):
     f_s = 25e6
     f_in = 5e6
-    f_nco = -4.5e6
+    f_nco = -4.9e6
 
     duration = .0001
     t_s = 1/f_s 
 
     t = np.arange(0,duration,t_s)
-    s_in = np.sin(2 * np.pi * f_in * t) * (2 ** 10)
+    s_in = np.sin(2 * np.pi * f_in * t) * (2 ** 5) + (2 ** 10)
 
     phase_inc = dut.nco.calc_phase_inc(f_s, f_nco)
     yield dut.nco.i_phase_inc.eq(phase_inc)
 
     i_results = []
     q_results = []
+    mixer_out = []
+    nco_out = []
+
 
     for s_i in s_in:
         yield dut.i_sample.eq(int(s_i))
+
+        m_i = twos_comp((yield dut.o_i), bits = dut.if_bits)
+        n_i = twos_comp((yield dut.nco.o_nco_i), bits = dut.nco_bits)
+        mixer_out.append(m_i)
+        nco_out.append(n_i)
+
         if (yield dut.o_valid):
             i_result = twos_comp((yield dut.o_i), bits = dut.output_bits)
             q_result = twos_comp((yield dut.o_q), bits = dut.output_bits)
-            i_results.append(i_result/512)
-            q_results.append(q_result/512)
+            i_results.append(i_result)
+            q_results.append(q_result)
         yield
 
+    nco_out = np.array(nco_out)
+    mixer_out = np.array(mixer_out)
+    synth_mixer = nco_out * s_in
     i_results = np.array(i_results)
     q_results = np.array(q_results)
     s_results = i_results + 1j * q_results
+    s_results = s_results - np.mean(s_results)
+    plt.subplot(3,1,1)
+    plt.plot(nco_out)
+    plt.plot(mixer_out)
 
-    plt.subplot(2,1,1)
-    plt.plot(i_results)
-    plt.plot(q_results)
-    plt.subplot(2,1,2)
+    plt.subplot(3,1,2)
+    plt.plot(np.real(s_results))
+    plt.plot(np.imag(s_results))
+    
+    plt.subplot(3,1,3)
     plt.magnitude_spectrum(s_results, f_s/8, scale='dB', alpha=.5)
     plt.show()
 

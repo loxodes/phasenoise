@@ -4,9 +4,14 @@
 
 #include <irq.h>
 #include <uart.h>
+#include <time.h>
 #include <console.h>
 #include <generated/csr.h>
 #include <generated/mem.h>
+
+#define NO_READBACK 0
+#define READBACK 1
+
 
 
 static char *readstr(void)
@@ -76,6 +81,7 @@ static void help(void)
 	puts("memory                          - memory test");
 	puts("wishbone                        - wishbone dma test");
 	puts("adc                        	  - adc test");
+	puts("synth                           - synth test");
 }
 
 static void reboot(void)
@@ -94,18 +100,18 @@ static uint32_t adc_spi_read(uint16_t addr)
 	adc_spi_mosi_write((addr << 8) + (1 << 23) + (1 << 22));
 	adc_spi_control_write(spi_control_start);
 
-	adc_spi_cs_write(1);
 	while(adc_spi_status_read() != 1 << CSR_ADC_SPI_STATUS_DONE_OFFSET) {
 		;
 	}
 
+	adc_spi_cs_write(1);
 	uint32_t r = adc_spi_miso_read();
 	return r & 0xFF;
 
 }
 
 
-static void adc_spi_write(uint16_t addr, uint8_t value)
+static uint8_t adc_spi_write(uint16_t addr, uint8_t value)
 {
 	while(adc_spi_status_read() != 1 << CSR_ADC_SPI_STATUS_DONE_OFFSET) {
 		;
@@ -126,7 +132,61 @@ static void adc_spi_write(uint16_t addr, uint8_t value)
 	if(r != value) {
 		printf("adc readback after write to %x failed!, expected %x got %x\n", addr, value, r);
 	}
+	return r;
 }
+
+static uint16_t synth_spi_read(uint8_t addr)
+{
+	while(synth_spi_status_read() != 1 << CSR_SYNTH_SPI_STATUS_DONE_OFFSET) {
+		;
+	}
+	uint32_t spi_control_start = (24 << CSR_SYNTH_SPI_CONTROL_LENGTH_OFFSET) | (1 << CSR_SYNTH_SPI_CONTROL_START_OFFSET);
+	uint32_t payload = (1 << 23) + (addr << 16);
+
+	synth_spi_cs_write(0);
+	synth_spi_mosi_write(payload);
+	synth_spi_control_write(spi_control_start);
+
+	while(synth_spi_status_read() != 1 << CSR_SYNTH_SPI_STATUS_DONE_OFFSET) {
+		;
+	}
+
+	synth_spi_cs_write(1);
+	uint32_t r = adc_spi_miso_read() & 0xFFFF;
+	return r;
+}
+
+static uint16_t synth_spi_write(uint16_t addr, uint16_t value, uint8_t readback)
+{
+	// https://github.com/loxodes/vna/blob/devel/software/vna_controller/bbone_spi_bitbang.py
+	while(synth_spi_status_read() != 1 << CSR_SYNTH_SPI_STATUS_DONE_OFFSET) {
+	;
+	}
+
+	uint32_t spi_control_start = (24 << CSR_SYNTH_SPI_CONTROL_LENGTH_OFFSET) | (1 << CSR_SYNTH_SPI_CONTROL_START_OFFSET);
+	uint32_t payload = (0 << 23) + (addr << 16) + value;
+	uint16_t r = 0;
+
+	synth_spi_cs_write(0);
+	synth_spi_mosi_write(payload);
+	synth_spi_control_write(spi_control_start);
+	while(synth_spi_status_read() != 1 << CSR_SYNTH_SPI_STATUS_DONE_OFFSET) {
+		;
+	}
+	synth_spi_cs_write(1);
+
+	if(readback) {
+		r = synth_spi_read(addr);
+
+		if(r != value) {
+			printf("symth readback after write to %x failed!, expected %x got %x\n", addr, value, r);
+		}
+	}
+
+	return r;
+}
+
+
 
 static void adc_init(void)
 {
@@ -265,6 +325,24 @@ static void memory_test(void)
 	
 }
 
+static void synth_test(void)
+{
+	// 7.5.1, powerup sequence:
+
+	// program RESET=1 to reset registers
+	synth_spi_write(0, 2, NO_READBACK);
+	// program RESET=0 to remove reset
+	synth_spi_write(0, TBD, NO_READBACK);
+
+	// program register values in reverse order, from lowest to highest
+	
+	// wait 10 ms
+	busy_wait(TBD);
+	
+	// program register 0 one more time with FCAL_EN = 1
+	synth_spi_write(0, TBD, NO_READBACK);
+}
+
 static void console_service(void)
 {
 	char *str;
@@ -281,14 +359,30 @@ static void console_service(void)
 		memory_test();
 	else if(strcmp(token, "adc") == 0)
 		adc_test();
+	else if(strcmp(token, "synth") == 0)
+		synth_test();
 	prompt();
 }
+
+
+static void pn_init(void)
+{
+	// enable 
+	// bit
+	// 0	if_g1
+	// 1	if_g2
+	// 2	buf_pd
+	// 3 	synth_ce
+	pn_gpio_out_write(0x08);
+}
+
 
 int main(void)
 {
 	irq_setmask(0);
 	irq_setie(1);
 	uart_init();
+	pn_init();
 
 	puts("\nCPU testing software built "__DATE__" "__TIME__"\n");
 	help();

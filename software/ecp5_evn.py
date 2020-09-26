@@ -19,7 +19,7 @@ from litex.soc.integration.builder import *
 from litex.soc.integration import export
 
 from litex.soc.cores.spi import SPIMaster
-
+from litex.soc.cores.gpio import GPIOOut
 from litex.soc.cores.led import LedChaser
 from litex.soc.cores.uart import UARTWishboneBridge
 #from litehyperbus.core.hyperram_ddrx2 import HyperRAMX2
@@ -202,6 +202,10 @@ class BaseSoC(SoCCore):
             sys_clk_freq = sys_clk_freq)
         self.add_csr("leds")
 
+        # Phase noise downconverter, control lines
+        self.submodules.pn_gpio = GPIOOut(platform.request("pn_control"))
+        self.add_csr("pn_gpio")
+         
         # ADC SPI bus ------------------------------------------------------------------------------
         # max SPI frequency is 20 MHz
         self.add_csr("adc_spi")
