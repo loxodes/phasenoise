@@ -1,1 +1,1 @@
-litex_term --kernel firmware/firmware.bin /dev/ttyUSB2
+litex_term --kernel firmware/firmware.bin /dev/ttyUSB3

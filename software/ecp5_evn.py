@@ -34,10 +34,6 @@ from ddr_test import ADC3321_DMA
 class _CRG(Module):
     def __init__(self, platform, sys_clk_freq, x5_clk_freq):
         self.clock_domains.cd_sys = ClockDomain()
-        # self.clock_domains.cd_hr2x = ClockDomain()
-        # self.clock_domains.cd_hr = ClockDomain()
-        # self.clock_domains.cd_hr2x_90 = ClockDomain()
-        # self.clock_domains.cd_hr_90 = ClockDomain()
         self.clock_domains.cd_adc_bitclk = ClockDomain()
         self.clock_domains.cd_adc_sampleclk = ClockDomain()
         # # # 
@@ -136,33 +132,29 @@ class BaseSoC(SoCCore):
             ),
 
             ("vt_adc_spi", 0,
-                Subsignal("clk",   Pins("L3")),
-                Subsignal("miso",  Pins("M5")),
-                Subsignal("mosi",  Pins("K3")),
-                Subsignal("cs_synth",  Pins("N2")),
-                Subsignal("cs_ref",  Pins("L2")),
+                Subsignal("clk",   Pins("N4")),
+                Subsignal("miso",  Pins("E14")),
+                Subsignal("mosi",  Pins("N3")),
+                Subsignal("cs_synth",  Pins("M4")),
+                Subsignal("cs_ref",  Pins("L4")),
                 IOStandard("LVCMOS33")
             ),
 
             ("synth_spi", 0,
-                Subsignal("cs_n",  Pins("J3")),
-                Subsignal("mosi",  Pins("L4")),
-                Subsignal("miso",  Pins("N3")),
-                Subsignal("clk",  Pins("N4")),
+                Subsignal("clk",  Pins("L3")),
+                Subsignal("mosi",  Pins("L2")),
+                Subsignal("cs_n",  Pins("L1")),
+                Subsignal("miso",  Pins("M5")),
                 IOStandard("LVCMOS33")
             ),
 
             ("pn_control", 0,
-                Subsignal("if_g1",  Pins("P1")),
-                Subsignal("if_g2",  Pins("D14")),
-                Subsignal("buf_pd", Pins("L1")),
-                Subsignal("synth_ce", Pins("M4")),
+                Subsignal("if_g1",  Pins("A15")),
+                Subsignal("if_g2",  Pins("H2")),
+                Subsignal("buf_pd", Pins("J3")),
+                Subsignal("synth_ce", Pins("N2")),
                 IOStandard("LVCMOS33")
             ),
-
-
-
-
         ])
 
     def __init__(self, sys_clk_freq=int(50e6), x5_clk_freq=None, toolchain="trellis", **kwargs):
@@ -203,9 +195,10 @@ class BaseSoC(SoCCore):
         self.add_csr("leds")
 
         # Phase noise downconverter, control lines
-        self.submodules.pn_gpio = GPIOOut(platform.request("pn_control"))
         self.add_csr("pn_gpio")
-         
+        pn_control = platform.request("pn_control")
+        self.submodules.pn_gpio = GPIOOut(Cat([pn_control.if_g1, pn_control.if_g2, pn_control.buf_pd, pn_control.synth_ce]))
+
         # ADC SPI bus ------------------------------------------------------------------------------
         # max SPI frequency is 20 MHz
         self.add_csr("adc_spi")
@@ -217,7 +210,6 @@ class BaseSoC(SoCCore):
         self.submodules.vt_spi = SPIMaster(platform.request("vt_adc_spi",0), 24, sys_clk_freq, int(sys_clk_freq/80), with_csr=True)
 
         # synth SPI bus ------------------------------------------------------------------------------
-        # TODO: set payload size
         self.add_csr("synth_spi")
         self.submodules.synth_spi = SPIMaster(platform.request("synth_spi",0), 24, sys_clk_freq, int(sys_clk_freq/80), with_csr=True)
 
@@ -226,6 +218,7 @@ class BaseSoC(SoCCore):
         self.submodules.bridge = UARTWishboneBridge(platform.request("serial_wb",1), sys_clk_freq, baudrate=3000000)
         self.add_wb_master(self.bridge.wishbone)
         self.add_csr("analyzer")
+
         analyzer_signals = [
  #           self.adc.adc_frontend.adc_buffer.adc_dout0,
  #           self.adc.adc_frontend.adc_buffer.adc_dout1,
