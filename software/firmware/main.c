@@ -379,7 +379,7 @@ static void synth_test(void)
 	synth_spi_write(78,0x0003,READBACK);
 	synth_spi_write(77,0x0000,READBACK);
 	synth_spi_write(76,0x000C,READBACK);
-	synth_spi_write(75,0x0940,READBACK);
+	synth_spi_write(75,0x0AC0,READBACK);
 	synth_spi_write(74,0x0000,READBACK);
 	synth_spi_write(73,0x003F,READBACK);
 	synth_spi_write(72,0x0001,READBACK);
@@ -410,7 +410,7 @@ static void synth_test(void)
 	synth_spi_write(47,0x0300,READBACK);
 	synth_spi_write(46,0x07FC,READBACK);
 	synth_spi_write(45,0xC0DF,READBACK);
-	synth_spi_write(44,0x1F63,READBACK);
+	synth_spi_write(44,0x01A3,READBACK);
 	synth_spi_write(43,0x0000,READBACK);
 	synth_spi_write(42,0x0000,READBACK);
 	synth_spi_write(41,0x0000,READBACK);
@@ -418,7 +418,7 @@ static void synth_test(void)
 	synth_spi_write(39,0x03E8,READBACK);
 	synth_spi_write(38,0x0000,READBACK);
 	synth_spi_write(37,0x0304,READBACK);
-	synth_spi_write(36,0x0028,READBACK);
+	synth_spi_write(36,0x0030,READBACK);
 	synth_spi_write(35,0x0004,READBACK);
 	synth_spi_write(34,0x0000,READBACK);
 	synth_spi_write(33,0x1E21,READBACK);
@@ -454,7 +454,7 @@ static void synth_test(void)
 	synth_spi_write(3,0x0642,READBACK);
 	synth_spi_write(2,0x0500,READBACK);
 	synth_spi_write(1,0x0808,READBACK);
-	synth_spi_write(0,0x2518,READBACK);
+	synth_spi_write(0,0x251C,READBACK);
 	// wait 10 ms
 	printf("initialization complete, waiting for final FCAL_EN...\n");
 	busy_wait(1000);

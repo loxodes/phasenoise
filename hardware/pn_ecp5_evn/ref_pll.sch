@@ -473,21 +473,6 @@ Wire Wire Line
 	4150 2400 4550 2400
 Wire Wire Line
 	4750 2400 4950 2400
-$Comp
-L Device:D_Small D?
-U 1 1 5F4F27D1
-P 5750 2000
-AR Path="/5F265927/5F4F27D1" Ref="D?"  Part="1" 
-AR Path="/5F4ECD93/5F4F27D1" Ref="D601"  Part="1" 
-F 0 "D601" V 5796 1930 50  0000 R CNN
-F 1 "CDBU0340-HF" V 5705 1930 50  0000 R CNN
-F 2 "Diode_SMD:D_0603_1608Metric" V 5750 2000 50  0001 C CNN
-F 3 "~" V 5750 2000 50  0001 C CNN
-F 4 "Digi-Key" H 5750 2000 50  0001 C CNN "Distributor"
-F 5 "641-2065-1-ND" H 5750 2000 50  0001 C CNN "Distributor Part Number"
-	1    5750 2000
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	5750 1800 5750 1900
 Wire Wire Line
@@ -518,11 +503,6 @@ Wire Wire Line
 	6050 2400 6050 2600
 Wire Wire Line
 	6050 2800 6050 2950
-Wire Wire Line
-	5750 2300 6050 2300
-Wire Wire Line
-	6050 2300 6050 2400
-Connection ~ 5750 2300
 Connection ~ 6050 2400
 Wire Wire Line
 	9500 4250 9500 4400
@@ -1116,7 +1096,7 @@ Connection ~ 1950 2300
 Text HLabel 1700 2300 0    50   Input ~ 0
 PHDET_IN
 Text Notes 4100 950  0    50   ~ 0
-TODO:\ncalculate stability?\nverify clamping circuit\ninvestigate noise tradeoffs\ncheck number of inversions prior to vtune
+TODO:\ncalculate stability?\ninvestigate noise tradeoffs
 Text Notes 2600 4900 0    50   ~ 0
 TODO:\nverify buffer circuit
 Text Notes 3150 1150 0    118  ~ 0
@@ -1167,4 +1147,24 @@ Wire Wire Line
 	3200 2800 3200 2950
 Wire Wire Line
 	3200 2500 3200 2600
+$Comp
+L Device:D_Small D?
+U 1 1 5F4F27D1
+P 5750 2000
+AR Path="/5F265927/5F4F27D1" Ref="D?"  Part="1" 
+AR Path="/5F4ECD93/5F4F27D1" Ref="D601"  Part="1" 
+F 0 "D601" V 5796 1930 50  0000 R CNN
+F 1 "CDBU0340-HF" V 5705 1930 50  0000 R CNN
+F 2 "Diode_SMD:D_0603_1608Metric" V 5750 2000 50  0001 C CNN
+F 3 "~" V 5750 2000 50  0001 C CNN
+F 4 "Digi-Key" H 5750 2000 50  0001 C CNN "Distributor"
+F 5 "641-2065-1-ND" H 5750 2000 50  0001 C CNN "Distributor Part Number"
+	1    5750 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5750 1800 6050 1800
+Wire Wire Line
+	6050 1800 6050 2400
+Connection ~ 5750 1800
 $EndSCHEMATC

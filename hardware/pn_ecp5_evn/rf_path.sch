@@ -295,8 +295,8 @@ F 5 "RR05P1.0KDCT-ND " H 8450 2150 50  0001 C CNN "Distributor Part Number"
 $EndComp
 Wire Wire Line
 	5600 2800 5600 3300
-Text Notes 4250 3800 0    50   ~ 0
-Av = 4
+Text Notes 4200 3750 0    50   ~ 0
+Av = 4.7
 Text Notes 5900 5900 0    50   ~ 0
 want to be able to measure -160 dBc/Hz signal @ 1 MHz offset\nassume max convserion loss of 10 dB, 0 dBm input\n-170 dBc/Hz..\n\nADC has 100 dB SFDR, 2.5 MSPS (60 dB gain), so DANL of 160 dBFS/Hz\nfull scale is 5Vpp 100 ohms, so 15 dBm\nDANL of 145 dBm/Hz\nNeed about 25 dB of gain
 Wire Wire Line
@@ -527,7 +527,7 @@ L Device:R_Small R703
 U 1 1 5F828269
 P 4450 3200
 F 0 "R703" V 4254 3200 50  0000 C CNN
-F 1 "DNI" V 4345 3200 50  0000 C CNN
+F 1 "1k" V 4345 3200 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4450 3200 50  0001 C CNN
 F 3 "~" H 4450 3200 50  0001 C CNN
 F 4 "N/A" H 4450 3200 50  0001 C CNN "Distributor Part Number"
@@ -628,7 +628,7 @@ L Device:R_Small R705
 U 1 1 5FD00D5A
 P 4750 2100
 F 0 "R705" V 4946 2100 50  0000 C CNN
-F 1 "1k" V 4855 2100 50  0000 C CNN
+F 1 "DNI" V 4855 2100 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4750 2100 50  0001 C CNN
 F 3 "~" H 4750 2100 50  0001 C CNN
 F 4 "Digi-Key" H 4750 2100 50  0001 C CNN "Distributor"
@@ -654,7 +654,7 @@ L Device:R_Small R706
 U 1 1 5FD08D17
 P 4750 4000
 F 0 "R706" V 4554 4000 50  0000 C CNN
-F 1 "DNI" V 4645 4000 50  0000 C CNN
+F 1 "0" V 4645 4000 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4750 4000 50  0001 C CNN
 F 3 "~" H 4750 4000 50  0001 C CNN
 F 4 "N/A" H 4750 4000 50  0001 C CNN "Distributor Part Number"
@@ -666,7 +666,7 @@ L Device:R_Small R704
 U 1 1 5FD0D558
 P 4450 3400
 F 0 "R704" V 4254 3400 50  0000 C CNN
-F 1 "0" V 4345 3400 50  0000 C CNN
+F 1 "DNI" V 4345 3400 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 4450 3400 50  0001 C CNN
 F 3 "~" H 4450 3400 50  0001 C CNN
 F 4 "Digi-Key" H 4450 3400 50  0001 C CNN "Distributor"
@@ -1069,7 +1069,7 @@ Wire Wire Line
 Wire Wire Line
 	3250 3300 3250 3200
 Text Notes 4200 1600 0    50   ~ 0
-Use TBD Sallen-Key low pass filter
+Use TBD Sallen-Key low pass filter?\n
 $Comp
 L Device:C_Small C715
 U 1 1 5F5B8CAD
