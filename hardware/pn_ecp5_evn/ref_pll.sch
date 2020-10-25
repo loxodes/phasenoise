@@ -159,7 +159,7 @@ P 2650 2300
 AR Path="/5F265927/5F4F273D" Ref="R?"  Part="1" 
 AR Path="/5F4ECD93/5F4F273D" Ref="R603"  Part="1" 
 F 0 "R603" V 2454 2300 50  0000 C CNN
-F 1 "51" V 2545 2300 50  0000 C CNN
+F 1 "120k" V 2545 2300 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 2650 2300 50  0001 C CNN
 F 3 "~" H 2650 2300 50  0001 C CNN
 F 4 "N/A" H 2650 2300 50  0001 C CNN "Distributor Part Number"
@@ -203,15 +203,15 @@ Connection ~ 4150 2400
 $Comp
 L Device:R_Small R?
 U 1 1 5F4F2753
-P 3650 1900
+P 3300 1550
 AR Path="/5F265927/5F4F2753" Ref="R?"  Part="1" 
 AR Path="/5F4ECD93/5F4F2753" Ref="R606"  Part="1" 
-F 0 "R606" V 3454 1900 50  0000 C CNN
-F 1 "220k" V 3545 1900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 3650 1900 50  0001 C CNN
-F 3 "~" H 3650 1900 50  0001 C CNN
-F 4 "N/A" H 3650 1900 50  0001 C CNN "Distributor Part Number"
-	1    3650 1900
+F 0 "R606" V 3104 1550 50  0000 C CNN
+F 1 "2.2k" V 3195 1550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3300 1550 50  0001 C CNN
+F 3 "~" H 3300 1550 50  0001 C CNN
+F 4 "N/A" H 3300 1550 50  0001 C CNN "Distributor Part Number"
+	1    3300 1550
 	0    1    1    0   
 $EndComp
 $Comp
@@ -221,7 +221,7 @@ P 3650 1550
 AR Path="/5F265927/5F4F2759" Ref="C?"  Part="1" 
 AR Path="/5F4ECD93/5F4F2759" Ref="C602"  Part="1" 
 F 0 "C602" V 3421 1550 50  0000 C CNN
-F 1 "1 uF" V 3512 1550 50  0000 C CNN
+F 1 "10 uF" V 3512 1550 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 3650 1550 50  0001 C CNN
 F 3 "~" H 3650 1550 50  0001 C CNN
 F 4 "N/A" H 3650 1550 50  0001 C CNN "Distributor Part Number"
@@ -229,17 +229,9 @@ F 4 "N/A" H 3650 1550 50  0001 C CNN "Distributor Part Number"
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3750 1900 4150 1900
-Wire Wire Line
 	3750 1550 4150 1550
 Wire Wire Line
-	4150 1550 4150 1900
-Wire Wire Line
-	3550 1550 3000 1550
-Wire Wire Line
-	3000 1550 3000 1900
-Wire Wire Line
-	3550 1900 3000 1900
+	3200 1550 3000 1550
 $Comp
 L Device:R_Small R?
 U 1 1 5F4F2765
@@ -445,12 +437,6 @@ F 5 "296-43607-1-ND " H 5250 2300 50  0001 C CNN "Distributor Part Number"
 $EndComp
 Wire Wire Line
 	2750 2300 3000 2300
-Wire Wire Line
-	4150 1900 4150 2400
-Connection ~ 4150 1900
-Wire Wire Line
-	3000 1900 3000 2300
-Connection ~ 3000 1900
 Connection ~ 3000 2300
 Wire Wire Line
 	3000 2300 3350 2300
@@ -1095,8 +1081,8 @@ Wire Wire Line
 Connection ~ 1950 2300
 Text HLabel 1700 2300 0    50   Input ~ 0
 PHDET_IN
-Text Notes 4100 950  0    50   ~ 0
-TODO:\ncalculate stability?\ninvestigate noise tradeoffs
+Text Notes 2900 3750 0    50   ~ 0
+TODO:\ncalculate stability?\ninvestigate noise tradeoffs\nadd analog switch for fast acq and modes?
 Text Notes 2600 4900 0    50   ~ 0
 TODO:\nverify buffer circuit
 Text Notes 3150 1150 0    118  ~ 0
@@ -1167,4 +1153,10 @@ Wire Wire Line
 Wire Wire Line
 	6050 1800 6050 2400
 Connection ~ 5750 1800
+Wire Wire Line
+	3000 1550 3000 2300
+Wire Wire Line
+	3400 1550 3550 1550
+Wire Wire Line
+	4150 1550 4150 2400
 $EndSCHEMATC
