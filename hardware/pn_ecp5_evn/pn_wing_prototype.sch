@@ -938,5 +938,5 @@ Wire Wire Line
 Wire Wire Line
 	7650 5750 8850 5750
 Text Notes 3450 1150 0    98   ~ 20
-low phase noise down converter (UNTESTED!)\n10-6000 MHz RF\nDC-1 MHz IF\ninternal LO generation, frequency locked to RF input
+low phase noise down converter\n10-6000 MHz RF\nDC-1 MHz IF\ninternal LO generation, frequency locked to RF input
 $EndSCHEMATC
