@@ -7,8 +7,8 @@ class CIC(Module):
     def __init__(self, input_bits = 12, cic_order = 3, decimation = 8):
         self.filter_bits = filter_bits = input_bits + cic_order * log2_int(decimation, need_pow2 = False)
         print('filter bits: {}'.format(filter_bits))
-        self.i_sample = Signal(input_bits)
-        self.o_result = Signal(filter_bits)
+        self.i_sample = Signal((input_bits, True))
+        self.o_result = Signal((filter_bits, True))
         self.o_valid = Signal(1)
 
         # sign extend input
@@ -32,7 +32,7 @@ class CIC(Module):
             combs[0].i_sample.eq(decimator.o_sample),
             combs[0].i_valid.eq(decimator.o_valid),
             self.o_valid.eq(decimator.o_valid)]
-        self.sync += [
+        self.sync += [   
             If(decimator.o_valid,
                 self.o_result.eq(combs[-1].o_sample),
             ).Else(
@@ -60,8 +60,8 @@ class CompensationFilter(Module):
 
 class _Comb(Module):
     def __init__(self, bits, delay = 5):
-        self.i_sample = Signal(bits)
-        self.o_sample = Signal(bits)
+        self.i_sample = Signal((bits, True))
+        self.o_sample = Signal((bits, True))
         self.i_valid = Signal(1)
         self.o_valid = Signal(1)
         delay = Signal(bits)
@@ -79,8 +79,8 @@ class _Comb(Module):
 
 class _Integrator(Module):
     def __init__(self, bits):
-        self.i_sample = Signal(bits)
-        self.o_sample = Signal(bits)
+        self.i_sample = Signal((bits, True))
+        self.o_sample = Signal((bits, True))
         self.i_valid = Signal()
         self.o_valid = Signal()
 
@@ -99,8 +99,8 @@ class _Integrator(Module):
 class _Decimator(Module):
     def __init__(self, bits, rate):
 
-        self.i_sample = Signal(bits)
-        self.o_sample = Signal(bits)
+        self.i_sample = Signal((bits, True))
+        self.o_sample = Signal((bits, True))
         self.o_valid = Signal(1)
 
         counter = Signal(log2_int(rate, need_pow2 = False))
@@ -132,7 +132,7 @@ def cic_test_sine(dut):
         return val
 
     ts = 1./25e6
-    fc = 10e6
+    fc = 1e6
     t = np.arange(0,.0001,ts)
     print(ts)
     s = np.sin(2 * np.pi * fc * t) * (2 ** 10)
@@ -142,7 +142,7 @@ def cic_test_sine(dut):
     for s_i in s:
         yield dut.i_sample.eq(int(s_i))
         if (yield dut.o_valid):
-            result = twos_comp((yield dut.o_result), bits = 21)
+            result = (yield dut.o_result)
             s_output.append(result/512)
         yield
 
@@ -156,11 +156,6 @@ def cic_test_noise(dut):
     import numpy as np
     import matplotlib.pyplot as plt
     from scipy.signal import lfilter
-
-    def twos_comp(val, bits):
-        if (val & (1 << (bits - 1))) != 0:
-            val = val - (1 << bits)
-        return val
 
     fs = 25e6
     ts = 1/fs
@@ -176,7 +171,7 @@ def cic_test_noise(dut):
     for s_i in s:
         yield dut.i_sample.eq(int(s_i))
         if (yield dut.o_valid):
-            result = twos_comp((yield dut.o_result), bits = 21)
+            result = (yield dut.o_result)
             s_output.append(result/512)
         yield
 
@@ -195,7 +190,7 @@ def cic_test_noise(dut):
 
 if __name__ == '__main__':
     dut = CIC()
-    run_simulation(dut, cic_test_noise(dut), vcd_name="cic_test.vcd")
+    run_simulation(dut, cic_test_sine(dut), vcd_name="cic_test.vcd")
 
 
 

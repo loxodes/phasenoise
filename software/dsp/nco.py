@@ -9,8 +9,8 @@ class NCO(Module):
     def __init__(self, output_bits = 16, phaseinc_bits = 18):
         self.i_phase_inc = Signal(phaseinc_bits)
 
-        self.o_nco_i = Signal(output_bits)
-        self.o_nco_q = Signal(output_bits)
+        self.o_nco_i = Signal((output_bits, True))
+        self.o_nco_q = Signal((output_bits, True))
 
         self.output_bits = output_bits
         self.phaseinc_bits = phaseinc_bits

@@ -9,10 +9,10 @@ import matplotlib.pyplot as plt
 
 class DDC(Module):
     def __init__(self, input_bits = 12, output_bits = 16, phaseinc_bits = 18, nco_bits = 18, if_bits = 20):
-        self.i_sample = Signal(input_bits)
+        self.i_sample = Signal((input_bits, True))
 
-        self.o_i = Signal(output_bits)
-        self.o_q = Signal(output_bits)
+        self.o_i = Signal((output_bits, True))
+        self.o_q = Signal((output_bits, True))
         self.o_valid = Signal()
 
         self.i_nco_freq = Signal(phaseinc_bits)
@@ -55,7 +55,7 @@ def ddc_test(dut):
     t_s = 1/f_s 
 
     t = np.arange(0,duration,t_s)
-    s_in = np.sin(2 * np.pi * f_in * t) * (2 ** 5) + (2 ** 10)
+    s_in = np.sin(2 * np.pi * f_in * t) * (2 ** 10)
 
     phase_inc = dut.nco.calc_phase_inc(f_s, f_nco)
     yield dut.nco.i_phase_inc.eq(phase_inc)
@@ -65,18 +65,17 @@ def ddc_test(dut):
     mixer_out = []
     nco_out = []
 
-
     for s_i in s_in:
         yield dut.i_sample.eq(int(s_i))
 
-        m_i = twos_comp((yield dut.o_i), bits = dut.if_bits)
-        n_i = twos_comp((yield dut.nco.o_nco_i), bits = dut.nco_bits)
+        m_i = (yield dut.o_i)
+        n_i = (yield dut.nco.o_nco_i)
         mixer_out.append(m_i)
         nco_out.append(n_i)
 
         if (yield dut.o_valid):
-            i_result = twos_comp((yield dut.o_i), bits = dut.output_bits)
-            q_result = twos_comp((yield dut.o_q), bits = dut.output_bits)
+            i_result = (yield dut.o_i)
+            q_result = (yield dut.o_q)
             i_results.append(i_result)
             q_results.append(q_result)
         yield
@@ -88,23 +87,21 @@ def ddc_test(dut):
     q_results = np.array(q_results)
     s_results = i_results + 1j * q_results
     s_results = s_results - np.mean(s_results)
+
     plt.subplot(3,1,1)
     plt.plot(nco_out)
     plt.plot(mixer_out)
+    plt.title('NCO and mixer output')
 
     plt.subplot(3,1,2)
     plt.plot(np.real(s_results))
     plt.plot(np.imag(s_results))
+    plt.title('real and imag output of ddc')
     
     plt.subplot(3,1,3)
     plt.magnitude_spectrum(s_results, f_s/8, scale='dB', alpha=.5)
+    plt.title('ddc output spectrum')
     plt.show()
-
-    
-def twos_comp(val, bits):
-    if (val & (1 << (bits - 1))) != 0:
-        val = val - (1 << bits)
-    return val
 
 if __name__ == '__main__':
     dut = DDC()
